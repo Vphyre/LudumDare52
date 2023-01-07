@@ -22,4 +22,8 @@ public class Test : MonoBehaviour
         Vector3 v = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
         transform.position += v * speed * Time.deltaTime;
     }
+
+    public void Testing() {
+        Debug.Log("Event works!");
+    }
  }
