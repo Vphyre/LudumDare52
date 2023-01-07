@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Player : MonoBehaviour
     //chamando script do game over
     private GameOver Ds;
 
+    public Text LifeTxt;
+
     void Start()
     {
         Ds = FindObjectOfType<GameOver>();
@@ -20,8 +23,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        LifeTxt.text = life.ToString();
+
         Vector3 v = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
         transform.position += v * speed * Time.deltaTime;
+
         
         if(life<=0)
         {
