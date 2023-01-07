@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private float speed;
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    } 
-}
+        Vector3 v = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
+        transform.position += v * speed * Time.deltaTime;
+    }
+ }
