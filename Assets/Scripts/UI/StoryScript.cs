@@ -19,8 +19,11 @@ public class StoryScript : MonoBehaviour
 
     private void UpdateScreenInfo()
     {
-        imgStory.sprite = dataStory.listStoryImages[curIndex];
-        txtStory.text = dataStory.listStoryTexts[curIndex];
+        if (dataStory.listStoryImages.Count > 0)
+        {
+            imgStory.sprite = dataStory.listStoryImages[curIndex];
+            txtStory.text = dataStory.listStoryTexts[curIndex];
+        }
     }
 
     void OnEnable()

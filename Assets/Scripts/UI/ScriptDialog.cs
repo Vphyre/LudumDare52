@@ -12,28 +12,26 @@ public class ScriptDialog : MonoBehaviour
     public Text dialogText;
     public Image characterImg;
     int curIndexDialog = 0;
+
     private void Start()
     {
         canvas.worldCamera = Camera.main;
     }
+
+    private void UpdateScreenInfo()
+    {
+        if (dialogData.listDialogTexts.Count > 0)
+        {
+            characterName.text = dialogData.listCharacterNames[curIndexDialog];
+            dialogText.text = dialogData.listDialogTexts[curIndexDialog];
+            characterImg.sprite = dialogData.listCharacterImgs[curIndexDialog];
+        }
+    }
+
     void OnEnable()
     {
         Time.timeScale = 0f;
-
-        // characterName = GameObject.Find("CharacterName").GetComponent<Text>();
-        characterName.text = dialogData.listCharacterNames[curIndexDialog];
-
-        // dialogText = GameObject.Find("TextDialog").GetComponent<Text>();
-        dialogText.text = dialogData.listDialogTexts[curIndexDialog];
-
-        // characterImg = GameObject.Find("CharacterImg").GetComponent<Image>();
-        characterImg.sprite = dialogData.listCharacterImgs[curIndexDialog];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        UpdateScreenInfo();
     }
 
     public void Next()
@@ -42,14 +40,7 @@ public class ScriptDialog : MonoBehaviour
 
         if (curIndexDialog < dialogData.listDialogTexts.Count)
         {
-            // characterName = GameObject.Find("CharacterName").GetComponent<Text>();
-            characterName.text = dialogData.listCharacterNames[curIndexDialog];
-
-            // dialogText = GameObject.Find("TextDialog").GetComponent<Text>();
-            dialogText.text = dialogData.listDialogTexts[curIndexDialog];
-
-            // characterImg = GameObject.Find("CharacterImg").GetComponent<Image>();
-            characterImg.sprite = dialogData.listCharacterImgs[curIndexDialog];
+            UpdateScreenInfo();
         }
         else
         {
