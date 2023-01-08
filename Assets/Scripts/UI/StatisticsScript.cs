@@ -5,7 +5,7 @@ using UnityEngine;
 public class StatisticsScript : MonoBehaviour
 {
     public Canvas canvas;
-    public GameObject statusPanel;
+    public GameObject npcsPanel;
     public GameObject weaponsPanel;
     public GameObject monstersPanel;
 
@@ -13,26 +13,20 @@ public class StatisticsScript : MonoBehaviour
     void Start()
     {
         HideElements();
-        Status();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        NPCs();
     }
 
     private void HideElements()
     {
-        statusPanel.SetActive(false);
+        npcsPanel.SetActive(false);
         weaponsPanel.SetActive(false);
         monstersPanel.SetActive(false);
     }
 
-    public void Status()
+    public void NPCs()
     {
         HideElements();
-        statusPanel.SetActive(true);
+        npcsPanel.SetActive(true);
     }
 
     public void Weapons()
