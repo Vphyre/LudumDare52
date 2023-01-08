@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bcda046d2637124eb84e599957bd423, type: 3}
+  m_Name: InitialDataStory
+  m_EditorClassIdentifier: 
+  listStoryImages:
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  listStoryTexts:
+  - Kon is a free-spirited adventurer, who used to travel the world and had been
+    riding a motorcycle on the roads in the interior of Brazil for a year. It was
+    Friday the thirteenth in the afternoon when his vehicle's tire went flat and
+    he was forced to stop on the side of the road. As it gets dark and with no place
+    to spend the night, he visualizes a dirt road that takes him to a small besieging
+    village. He tries to seek help from the residents, but does not see anyone, so
+    he decides to approach the door of one of the farthest houses and realizes that
+    it is ajar, seeing lights calls again, and once again there is no answer.
+  - The brave man enters the small house still afraid and goes towards the only illuminated
+    room, to his surprise, he ends up finding a cat figurine on top of a table next
+    to a candle, curious takes the object, and then begins to feel an intense headache
+    until falling unconscious on the floor.
+  - Upon receiving the first rays of sunlight of the day, the young man gradually
+    regains his consciousness and realizes that something different has happened,
+    his arms were covered in dark and silky hair, his feet and hands were now in
+    the shape of paws, his ears were sensitive and pointed at the same time that
+    he noticed his wet nose, his scream echoed throughout the place when he discovered
+    that he now also had a thick and fluffy cat's tail. In desperation, he finds
+    an abandoned and broken piece of mirror in the corner of that room and to his
+    sadness and agony he confirms his suspicions, now he was a large and half humanoid
+    feline figure with an intense yellow look
+  - 'Kon, panting and desperate, ran out the door he entered, with his thoughts too
+    messed up to realize that the place was now all transformed, it no longer looked
+    like an abandoned property, he could seelands prepared for planting and the place
+    that seemed abandoned was now all organized. The adventurer could not believe
+    what he was seeing, walking towards him came an elderly looking kitten that was
+    not alone, around him there was a kind of fish that curiously seemed to be swimming
+    in the air, with a calm smile on his slightly wrinkled face. the ancient feline
+    says:'
+  - "-\tFinally, we've been waiting for years for you to join us. Welcome! I'm Nyantonio
+    - the strange cat points to the floating being beside him - and this one is the
+    number one helper of the Mother of Water, Dourado -, I've been taking care of
+    this village for centuries."
+  - "-\tWhere am I? What am I? - said Kon, still visibly stunned- what am I doing
+    here?"
+  - "-\tI'll explain everything to you, you..."
+  - A loud bang happens near the plantation and everyone panics. When they suddenly
+    saw the cause of all the confusion, it was a creature that he had only seen in
+    the books of his childhood. He had flaming hair, a pointed spear in one hand,
+    his feet were turned backwards, his clothes were tribal, his eyes were red. like
+    blood they glowed intensely and their strong hissing made large and strong eddies
+    of wind.
+  - "-\tIt's Curupira-nyan! This way, hurry, we don't have time - the old cat's countenance
+    totally changed and his first reaction was to pull Kon to a safe place - here
+    we can talk a little, listen well, time is short, we've been caught by the black
+    cat's curse, we have to defeat the guardians to break it and we can go back to
+    being human, we were hopeless when Iara-nyan prophesied that one day, on a friday
+    the thirteenth with a full moon, the hero would come. Our land is magic, our
+    plantation will help you, Dourado, show him! Grab corn and aim for the red-haired
+    guardian quickly!"
+  - "-\tBut\u2026but\u2026 - Kon was looking perplexed while the small fish aimed
+    and launched something towards the cause of all that fuss, popcorn started hitting
+    the rival and he retreated until he ran away."
+  - After the scare, the black-furred feline looks at the old man with an astonished
+    face, Nyantonio smiles awkwardly and starts looking in his bag for something;
+  - "-\tYou have to be here, just a minute..."
+  - With an expression of satisfaction, he then reveals a small bag to Kon and hands
+    it to the hero's paws;
+  - "-\tMy young man, these are magic seeds to help you in this mission - the old
+    man then starts showing one by one - This is the one fromimprover, as you can
+    see, it's a fast weapon that shreds popcorn, but it grows every day;is here is
+    the potatobom, You can tell by the name what it does, right? Grow every twelve
+    hours, just throw it and\u2026boom! Ah, this one is my favorite,Cenorai -(laughs)-
+    which grows every hour and always in large numbers, we can always have a hand
+    when the guardians appear, and finally this is the banana orange which grows
+    quickly and you will never be disarmed if you have it, but its damage is very
+    small. But since not everything is perfect, unfortunately our weapons rot very
+    quickly, so we always have to plant them, good luck\u2026"
+  - "-\tOh holy cat! I'm lost! - exclaims Kon with great concern."
+  - 'With the bag in its paws, the young cat heads towards the plantation area -Since
+    there''s no other way, I''m going for it! '

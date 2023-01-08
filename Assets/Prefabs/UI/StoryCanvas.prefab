@@ -194,7 +194,7 @@ MonoBehaviour:
   canvas: {fileID: 6105019619959664610}
   dataStory: {fileID: 0}
   imgStory: {fileID: 6105019619742451391}
-  txtStory: {fileID: 0}
+  txtStory: {fileID: 6105019620683294964}
 --- !u!1 &6105019620605155179
 GameObject:
   m_ObjectHideFlags: 0
