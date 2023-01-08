@@ -524,6 +524,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8781571067178346960, guid: 29ff1d63d00c74a40b31460390424853, type: 3}
+      propertyPath: onEventTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DayCicle
+      objectReference: {fileID: 0}
     - target: {fileID: 8781571067178346966, guid: 29ff1d63d00c74a40b31460390424853, type: 3}
       propertyPath: m_RootOrder
       value: 4

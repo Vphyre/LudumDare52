@@ -5,7 +5,7 @@ public class PlantingPlot : MonoBehaviour
     public int daysPassed = 0;
     public Seed actualSeed;
 
-    public void dayCicle() {
+    public void DayCicle() {
         if (!actualSeed) {
             return;
         }
