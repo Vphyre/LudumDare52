@@ -1,26 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class StatisticsScript : MonoBehaviour
 {
     public Canvas canvas;
-    public ScrollRect statusScrollView;
-    public ScrollRect weaponsScrollView;
-    public ScrollRect monstersScrollView;
-
-    private Vector3 statusPosition;
-    private Vector3 weaponsPosition;
-    private Vector3 monstersPositon;
+    public GameObject statusPanel;
+    public GameObject weaponsPanel;
+    public GameObject monstersPanel;
 
     // Start is called before the first frame update
     void Start()
     {
-        statusPosition = statusScrollView.transform.position;
-        weaponsPosition = weaponsScrollView.transform.position;
-        monstersPositon = monstersScrollView.transform.position;
-
         HideElements();
         Status();
     }
@@ -33,34 +24,27 @@ public class StatisticsScript : MonoBehaviour
 
     private void HideElements()
     {
-        statusScrollView.enabled = false;
-        weaponsScrollView.enabled = false;
-        monstersScrollView.enabled = false;
-
-        statusScrollView.transform.position = new Vector3(2000, 2000, 2000);
-        weaponsScrollView.transform.position = new Vector3(2000, 2000, 2000);
-        monstersScrollView.transform.position = new Vector3(2000, 2000, 2000);
+        statusPanel.SetActive(false);
+        weaponsPanel.SetActive(false);
+        monstersPanel.SetActive(false);
     }
 
     public void Status()
     {
         HideElements();
-        statusScrollView.enabled = true;
-        statusScrollView.transform.position = statusPosition;
+        statusPanel.SetActive(true);
     }
 
     public void Weapons()
     {
         HideElements();
-        weaponsScrollView.enabled = true;
-        weaponsScrollView.transform.position = weaponsPosition;
+        weaponsPanel.SetActive(true);
     }
 
     public void Monsters()
     {
         HideElements();
-        monstersScrollView.enabled = true;
-        monstersScrollView.transform.position = monstersPositon;
+        monstersPanel.SetActive(true);
     }
 
     public void Close()
