@@ -14,7 +14,7 @@ public class ScriptDialog : MonoBehaviour
     int curIndexDialog = 0;
     private void Start()
     {
-        canvas.worldCamera = Camera.main;    
+        canvas.worldCamera = Camera.main;
     }
     void OnEnable()
     {
