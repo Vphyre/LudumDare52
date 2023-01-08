@@ -23,7 +23,11 @@ public class Test : MonoBehaviour
         transform.position += v * speed * Time.deltaTime;
     }
 
-    public void Testing() {
-        Debug.Log("Event works!");
+    public void TestingDay() {
+        Debug.Log("Event works day executed!");
+    }
+
+    public void TestingNight() {
+        Debug.Log("Event working, night executed");
     }
  }

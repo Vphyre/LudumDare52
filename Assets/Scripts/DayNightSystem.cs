@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
 using System.Collections;
 
 public enum DayState {
@@ -17,7 +16,8 @@ public class DayNightSystem : MonoBehaviour
     public DayState actualState = DayState.Day;
 
     // Event handler
-    public GameEvent dayNightCicleEvent;
+    public GameEvent dayCicle;
+    public GameEvent nightCicle;
 
     // Optimazation variables
     private WaitForSeconds dayTimeWait;
@@ -38,19 +38,18 @@ public class DayNightSystem : MonoBehaviour
     private IEnumerator ChangeDayCicle()
     {
         while (true)
-        {
-            Debug.Log("Passou");
+        {   
             Debug.Log(actualState);
             if (actualState == DayState.Day) {
                 yield return dayTimeWait;
                 Debug.Log("Continue to Night");
                 actualState = DayState.Night;
-                dayNightCicleEvent.TriggerEvent();
+                nightCicle.TriggerEvent();
             } else {
                 yield return nightTimeWait;
                 Debug.Log("Continue to Day");
                 actualState = DayState.Day;
-                dayNightCicleEvent.TriggerEvent();
+                dayCicle.TriggerEvent();
             }
         }
     }
