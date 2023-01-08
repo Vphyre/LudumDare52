@@ -9,15 +9,14 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private float DestroyBulletTM;
     void Start()
-    {
-
-        
+    {   
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up * Bulletspeed * Time.deltaTime, Space.Self);
+      transform.Translate(Vector2.up * Bulletspeed * Time.deltaTime, Space.Self);
+        
         Destroy(gameObject, DestroyBulletTM);
-    }
+    } 
 }
