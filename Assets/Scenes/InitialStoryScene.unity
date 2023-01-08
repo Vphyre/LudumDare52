@@ -286,6 +286,10 @@ PrefabInstance:
       propertyPath: dataStory
       value: 
       objectReference: {fileID: 11400000, guid: 4806b5e076fcb434784e23146193b707, type: 2}
+    - target: {fileID: 6105019619959664608, guid: dcf5017bbd069d647b82921aa27f532a, type: 3}
+      propertyPath: sceneName
+      value: MENU
+      objectReference: {fileID: 0}
     - target: {fileID: 6105019619959664611, guid: dcf5017bbd069d647b82921aa27f532a, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StoryScript : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class StoryScript : MonoBehaviour
     public DataStory dataStory;
     public Image imgStory;
     public Text txtStory;
+
+    public string sceneName = "";
     private int curIndex = 0;
 
     // Start is called before the first frame update
@@ -41,6 +44,11 @@ public class StoryScript : MonoBehaviour
         }
         else
         {
+            if (sceneName != "") 
+            {
+                SceneManager.LoadScene(sceneName);
+            }
+
             this.gameObject.SetActive(false);
         }
     }
