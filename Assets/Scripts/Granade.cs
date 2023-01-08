@@ -23,7 +23,7 @@ public class Granade : MonoBehaviour
     {
         if (stoopGr == false)
         {
-            transform.Translate(Vector2.up * Bulletspeed * Time.deltaTime, Space.Self);
+            transform.Translate(Vector2.right * Bulletspeed * Time.deltaTime, Space.Self);
         }
     }
     private void Explode()
