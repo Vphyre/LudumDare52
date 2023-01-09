@@ -12,15 +12,28 @@ public class Player : MonoBehaviour
     private int life;
     //chamando script do game over
     private GameOver Ds;
+    private Rigidbody2D rbp;
     private SpriteRenderer sr;
     public Text LifeTxt;
     private Animator anim;
+    [Header("Danos dos chefes")]
+    [Header("Chefe 1")]
+    [SerializeField] private int MinDamage1;
+    [SerializeField] private int MaxDamage1;
+    [Header("chefe 2")]
+    [SerializeField] private int MinDamage2;
+    [SerializeField] private int MaxDamage2;
+    [Header("chefe 3")]
+    [SerializeField] private int MinDamage3;
+    [SerializeField] private int MaxDamage3;
 
     void Start()
     {
         Ds = FindObjectOfType<GameOver>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        rbp= GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -57,6 +70,30 @@ public class Player : MonoBehaviour
         if (life <= 0)
         {
             Ds.GO();
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Boss1"))
+        {
+            int damage = Random.Range(MinDamage1, MaxDamage1);
+            life = life - damage;
+            rbp.velocity = Vector2.zero;
+
+        }
+        if (collision.gameObject.CompareTag("Boss2"))
+        {
+            int damage = Random.Range(MinDamage2, MaxDamage2);
+            life = life - damage;
+            rbp.velocity = Vector2.zero;
+
+        }
+        if (collision.gameObject.CompareTag("Boss3"))
+        {
+            int damage = Random.Range(MinDamage3, MaxDamage3);
+            life = life - damage;
+            rbp.velocity = Vector2.zero;
+
         }
     }
 }
