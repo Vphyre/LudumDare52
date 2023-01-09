@@ -227,7 +227,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -283,12 +283,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6105019619959664608, guid: dcf5017bbd069d647b82921aa27f532a, type: 3}
-      propertyPath: dataStory
-      value: 
-      objectReference: {fileID: 11400000, guid: 4806b5e076fcb434784e23146193b707, type: 2}
-    - target: {fileID: 6105019619959664608, guid: dcf5017bbd069d647b82921aa27f532a, type: 3}
       propertyPath: sceneName
-      value: MENU
+      value: Gameplay
       objectReference: {fileID: 0}
     - target: {fileID: 6105019619959664611, guid: dcf5017bbd069d647b82921aa27f532a, type: 3}
       propertyPath: m_Pivot.x
