@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using TMPro;
 
 public class UIManager : Singleton<UIManager>
@@ -31,11 +32,34 @@ public class UIManager : Singleton<UIManager>
     public GameObject activeYellowBananaWeapon;
     public string actualSelectedSeed;
     public string actualSelectedWeapon;
+    private int dayCount = 0;
+    public TextMeshProUGUI daysPassed;
+    public TextMeshProUGUI timeCounter;
+    public float timeLeft = 0f;
+    public bool isDay = true;
 
     protected override void Awake()
     {
         IsPersistentBetweenScenes = false;
         base.Awake();
+    }
+
+    private void Start() {
+        timeLeft = DayNightSystem.Instance.dayTime;
+    }
+
+    private void Update() {
+        if (isDay) {
+            if (timeLeft > 0) {
+                timeLeft -= Time.deltaTime;
+                timeCounter.text = "Time to night: " + (Mathf.Ceil(timeLeft)).ToString();
+            }
+        } else {
+            if (timeLeft > 0) {
+                timeLeft -= Time.deltaTime;
+                timeCounter.text = "Time to day: " + (Mathf.Ceil(timeLeft)).ToString();
+            }
+        }
     }
 
     public void UpdateSeedUI()
@@ -242,5 +266,17 @@ public class UIManager : Singleton<UIManager>
                 break;
         }
         InventorySystem.Instance.SelectWeapon(bulletName);
+    }
+
+    public void DayCicle () {
+        dayCount++;
+        daysPassed.text = "Days: " + dayCount.ToString();
+        isDay = true;
+        timeLeft = DayNightSystem.Instance.dayTime;
+    }
+
+    public void NightCicle() {
+        isDay = false;
+        timeLeft = DayNightSystem.Instance.nightTime;
     }
 }
