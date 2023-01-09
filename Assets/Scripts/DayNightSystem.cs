@@ -39,15 +39,12 @@ public class DayNightSystem : MonoBehaviour
     {
         while (true)
         {   
-            Debug.Log(actualState);
             if (actualState == DayState.Day) {
                 yield return dayTimeWait;
-                Debug.Log("Continue to Night");
                 actualState = DayState.Night;
                 nightCicle.TriggerEvent();
             } else {
                 yield return nightTimeWait;
-                Debug.Log("Continue to Day");
                 actualState = DayState.Day;
                 dayCicle.TriggerEvent();
             }

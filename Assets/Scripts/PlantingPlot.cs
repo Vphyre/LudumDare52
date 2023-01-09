@@ -4,6 +4,7 @@ public class PlantingPlot : MonoBehaviour
 {
     public int daysPassed = 0;
     public Seed actualSeed;
+    public SpriteRenderer plantedSeedSprite;
 
     public void DayCicle() {
         if (!actualSeed) {
@@ -11,9 +12,7 @@ public class PlantingPlot : MonoBehaviour
         }
         daysPassed = Mathf.Clamp(daysPassed + 1, 0, actualSeed.daysToGrow);
         if (daysPassed == actualSeed.daysToGrow) {
-            Debug.Log("Ready to harvest");
-            //Change sprite to the growUp Sprite
-            // transform.GetComponent<Sprite>().sprite = actualSeed.growUpSprite
+            plantedSeedSprite.sprite = actualSeed.growUpSprite;
         }
     }
 
@@ -21,12 +20,15 @@ public class PlantingPlot : MonoBehaviour
         if(Input.GetMouseButtonDown(0)) {
             if (!actualSeed) {
                 Debug.Log("Trying to plant");
-                //Get selected from inventory .plant()
-                // actualSeed = seed;
+                Seed seed = InventorySystem.Instance.UseSeed();
+                plantedSeedSprite.sprite = seed.defaultSprite;
+                actualSeed = seed;
+                daysPassed = 0;
             }
             else if (actualSeed) {
                 if (daysPassed == actualSeed.daysToGrow) {
                     Debug.Log("Harvested");
+                    plantedSeedSprite.sprite = null;
                     actualSeed = null;
                     daysPassed = 0;
                 } else {
