@@ -15,12 +15,12 @@ public class InventorySystem : Singleton<InventorySystem>
     public int carrotBullets = 0;
     public int potatoBullets = 0;
     public int cornBullets = 0;
-    public Bullet selectedBullet = null;
-    public Bullet cornBullet;
-    public Bullet carrotBullet;
-    public Bullet potatoBullet;
-    public Bullet greenBananaBullet;
-    public Bullet yellowBananaBullet;
+    public BulletType selectedBullet = null;
+    public BulletType cornBullet;
+    public BulletType carrotBullet;
+    public BulletType potatoBullet;
+    public BulletType greenBananaBullet;
+    public BulletType yellowBananaBullet;
 
     protected override void Awake() {
         IsPersistentBetweenScenes = false;
@@ -67,11 +67,11 @@ public class InventorySystem : Singleton<InventorySystem>
         UIManager.Instance.UpdateWeaponUI(); 
     }
 
-        public Bullet UseBullet () {
+        public BulletType UseBullet () {
         if (!selectedBullet) {
             return null;
         }
-        Bullet oldBullet = selectedBullet;
+        BulletType oldBullet = selectedBullet;
         switch(oldBullet.bulletName) {
             case "potato": 
                 potatoBullets--;
@@ -81,7 +81,7 @@ public class InventorySystem : Singleton<InventorySystem>
             break;
             case "corn":
                 cornBullets--;
-                if (cornSeedQtd == 0) {
+                if (cornBullets == 0) {
                     selectedBullet = null;
                 }
             break;

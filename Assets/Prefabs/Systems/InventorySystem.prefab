@@ -56,8 +56,8 @@ MonoBehaviour:
   potatoBullets: 0
   cornBullets: 0
   selectedBullet: {fileID: 0}
-  cornBullet: {fileID: 0}
-  carrotBullet: {fileID: 0}
-  potatoBullet: {fileID: 0}
-  greenBananaBullet: {fileID: 0}
-  yellowBananaBullet: {fileID: 0}
+  cornBullet: {fileID: 11400000, guid: 377248411c8e6164390bbbd9b9c060a9, type: 2}
+  carrotBullet: {fileID: 11400000, guid: b83703618ee23fc4f975eeae38a999d0, type: 2}
+  potatoBullet: {fileID: 11400000, guid: c43c7620a0ae5e440bf0dc9a12b94700, type: 2}
+  greenBananaBullet: {fileID: 11400000, guid: 9dedb491befc7924b9ef552a7bf097d3, type: 2}
+  yellowBananaBullet: {fileID: 11400000, guid: 6c20d61c4b6020c4ab4b80775b532ae8, type: 2}

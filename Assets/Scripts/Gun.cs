@@ -18,9 +18,10 @@ public class Gun : MonoBehaviour
         Mira();
         if (Time.time > time)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && InventorySystem.Instance.selectedBullet)
             {
                 Instantiate(projetil, GunPoint.position, transform.rotation);
+                InventorySystem.Instance.UseBullet();
                 time = Time.time + timebts;
             }
             
@@ -29,12 +30,12 @@ public class Gun : MonoBehaviour
 
     private void Mira()
     {
-        //rotação
+        //rotaï¿½ï¿½o
         Vector3 dig = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(dig.y, dig.x)* Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f,0f,angle);
 
-        //posição
+        //posiï¿½ï¿½o
         Vector3 playermo = Camera.main.ScreenToWorldPoint(Input.mousePosition)- player.position;
         playermo.z= 0;
         transform.position = player.position+ (offset*playermo.normalized);
