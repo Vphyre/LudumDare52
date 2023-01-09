@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T _instance;
@@ -11,6 +12,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             {
                 _instance = FindObjectOfType<T>();
             }
+
             return _instance;
         }
 
@@ -20,11 +22,63 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
+    /// <summary> Os Managers especificos de uma determinada cena devem setar essa variavel para FALSE. </summary>
+    protected bool IsPersistentBetweenScenes = true;
+
+    private bool alreadyUnsubscribed = false;
+
     protected virtual void Awake()
     {
+
         if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
         }
+        else if (IsPersistentBetweenScenes)
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+    }
+
+    protected virtual void OnEnable()
+    {
+        SubscribeEvents();
+    }
+
+    protected virtual void OnDisable()
+    {
+        if (!alreadyUnsubscribed)
+        {
+            UnsubscribeEvents();
+        }
+    }
+
+    protected virtual void OnDestroy()
+    {
+        // This line has been added to avoid possible memory leaks
+        // see at: https://forum.unity.com/threads/warning-memory-leak.153450/
+        Instance = null;
+        if (!alreadyUnsubscribed)
+        {
+            UnsubscribeEvents();
+        }
+    }
+
+    protected virtual void OnApplicationQuit()
+    {
+        if (!alreadyUnsubscribed)
+        {
+            UnsubscribeEvents();
+        }
+    }
+
+    protected virtual void SubscribeEvents()
+    {
+        alreadyUnsubscribed = false;
+    }
+
+    protected virtual void UnsubscribeEvents()
+    {
+        alreadyUnsubscribed = true;
     }
 }
