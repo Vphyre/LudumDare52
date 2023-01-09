@@ -9,14 +9,21 @@ public class Gun : MonoBehaviour
     [SerializeField] private float offset;
     [SerializeField] private Transform GunPoint;
     [SerializeField] private GameObject projetil;
+     private float time =0;
+    [SerializeField] private float timebts;
 
     // Update is called once per frame
     void Update()
     {
         Mira();
-        if(Input.GetMouseButtonDown(0))
+        if (Time.time > time)
         {
-            Instantiate(projetil, GunPoint.position,transform.rotation);
+            if (Input.GetMouseButtonDown(0))
+            {
+                Instantiate(projetil, GunPoint.position, transform.rotation);
+                time = Time.time + timebts;
+            }
+            
         }
     }
 
@@ -33,7 +40,7 @@ public class Gun : MonoBehaviour
         transform.position = player.position+ (offset*playermo.normalized);
 
         //girar
-       /* Vector3 scale = Vector3.one;
+        Vector3 scale = Vector3.one;
         if(angle>90|| angle < -90)
         {
             scale.y = -1;
@@ -42,6 +49,6 @@ public class Gun : MonoBehaviour
         {
             scale.y = 1;
         }
-        transform.localScale = scale;*/
+        transform.localScale = scale;
     }
 }
