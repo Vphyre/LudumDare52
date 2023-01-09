@@ -6,7 +6,7 @@ public enum DayState {
     Night
 }
 
-public class DayNightSystem : MonoBehaviour
+public class DayNightSystem : Singleton<DayNightSystem>
 {
     [Header("Day time in seconds")]
     public int dayTime = 60;
@@ -23,6 +23,12 @@ public class DayNightSystem : MonoBehaviour
     private WaitForSeconds dayTimeWait;
     private WaitForSeconds nightTimeWait;
 
+    protected override void Awake()
+    {
+        IsPersistentBetweenScenes = true;
+        base.Awake();
+    }
+
     void Start()
     {
         dayTimeWait = new WaitForSeconds(dayTime);
@@ -31,8 +37,17 @@ public class DayNightSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnDestroy() {
+    protected override void OnDestroy() {
         StopAllCoroutines();
+        base.OnDestroy();
+    }
+
+    public void StopDayNightCicle() {
+        StopAllCoroutines();
+    }
+
+    public void StartDayNightCicle() {
+        StartCoroutine("ChangeDayCicle");
     }
 
     private IEnumerator ChangeDayCicle()
