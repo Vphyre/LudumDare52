@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b45e908b989ca43b40f4ccb2858899, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
+  seedName: carrot
   daysToGrow: 2
   defaultSprite: {fileID: 21300000, guid: d24e7e0b75e1a244bb9687d6fd4315ef, type: 3}
   growUpSprite: {fileID: 21300000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
+  bulletsPerPlant: 5

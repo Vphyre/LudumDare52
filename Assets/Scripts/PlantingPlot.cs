@@ -21,6 +21,10 @@ public class PlantingPlot : MonoBehaviour
             if (!actualSeed) {
                 Debug.Log("Trying to plant");
                 Seed seed = InventorySystem.Instance.UseSeed();
+                if (!seed) {
+                    Debug.Log("No seed selected");
+                    return;
+                }
                 plantedSeedSprite.sprite = seed.defaultSprite;
                 actualSeed = seed;
                 daysPassed = 0;
@@ -28,6 +32,7 @@ public class PlantingPlot : MonoBehaviour
             else if (actualSeed) {
                 if (daysPassed == actualSeed.daysToGrow) {
                     Debug.Log("Harvested");
+                    InventorySystem.Instance.AddBullets(actualSeed);
                     plantedSeedSprite.sprite = null;
                     actualSeed = null;
                     daysPassed = 0;

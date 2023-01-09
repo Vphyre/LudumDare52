@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7734315545317651121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7734315545317651123}
+  - component: {fileID: 7734315545317651122}
+  m_Layer: 0
+  m_Name: InventorySystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7734315545317651123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7734315545317651121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.3473792, y: 1.0054226, z: 0.53975856}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7734315545317651122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7734315545317651121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c859eefb04fed8843a8db9a1d372eaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeds: []
+  selectedSeed: {fileID: 0}
+  potato: {fileID: 11400000, guid: 8e94a19064c6b2d44938fbf94e2c60a8, type: 2}
+  carrot: {fileID: 11400000, guid: bd9fe9bff9d41bd4f8528fa024579b7d, type: 2}
+  corn: {fileID: 11400000, guid: 19cfa7386cdcc26468818b75edbab674, type: 2}
+  carrotSeedQtd: 0
+  potatoSeedQtd: 0
+  cornSeedQtd: 0
+  carrotBullets: 0
+  potatoBullets: 0
+  cornBullets: 0
+  selectedBullet: {fileID: 0}
+  cornBullet: {fileID: 0}
+  carrotBullet: {fileID: 0}
+  potatoBullet: {fileID: 0}
+  greenBananaBullet: {fileID: 0}
+  yellowBananaBullet: {fileID: 0}

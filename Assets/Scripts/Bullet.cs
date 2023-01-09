@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     private float Bulletspeed;
     [SerializeField]
     private float DestroyBulletTM;
+
+    public string bulletName;
     void Start()
     {   
     }
