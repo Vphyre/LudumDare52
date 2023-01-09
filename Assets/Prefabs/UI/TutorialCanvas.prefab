@@ -287,7 +287,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 126.9668, y: 98.0257}
+  m_SizeDelta: {x: 191.8558, y: 98.0257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2727127790077320955
 CanvasRenderer:
@@ -318,7 +318,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: "Movement:\n\n\tW -> Up\n\tS  -> Down\n\tD  -> Right\n\tA  -> Left"
 --- !u!1 &2727127790435466730
 GameObject:
@@ -551,7 +551,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0

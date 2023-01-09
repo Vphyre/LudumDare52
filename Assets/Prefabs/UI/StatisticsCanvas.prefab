@@ -67,7 +67,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -195,7 +195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -109, y: 40}
+  m_AnchoredPosition: {x: -109, y: 58}
   m_SizeDelta: {x: 160, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2909973140094048595
@@ -227,7 +227,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -525,7 +525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8694697535474783531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -698,9 +698,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &4940780853467820111
 CanvasRenderer:
@@ -788,8 +788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -109, y: 40}
-  m_SizeDelta: {x: 160, y: 25}
+  m_AnchoredPosition: {x: 10, y: 40}
+  m_SizeDelta: {x: 400, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1067858347658777675
 CanvasRenderer:
@@ -820,7 +820,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1056,7 +1056,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -1067,7 +1067,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 'Carrots with double shot. Sharp tips like a kunai, good range and median
     damage. Although it is made of carrots, it is not recommended for view. Can you
     imagine getting caught in the eye? Growing time: grows every 1 hour'
@@ -1138,7 +1138,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1572364569812182276}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.93333334
+  m_Size: 0.875
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1345,7 +1345,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -1356,7 +1356,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 'An enhanced version of the green banana. It has more damage than the other
     version and can also be recovered after a few seconds. Rich in potassium. Recovery
     time: 2 seconds'
@@ -1554,7 +1554,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 28
     m_FontStyle: 1
     m_BestFit: 0
@@ -1634,8 +1634,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
-    m_FontSize: 10
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
+    m_FontSize: 9
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1645,7 +1645,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: "I've never been so afraid of anything before! Think of a weird bug! A
     furry giant with an eye on his forehead and his mouth on his navel, it's very
     ugly! Your screams are a powerful attack so I have to be careful not to get hit
@@ -1687,7 +1687,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 300}
+  m_SizeDelta: {x: 0, y: 320}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &2434709969158856199
 GameObject:
@@ -2051,7 +2051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3857965967640275203
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2147,8 +2147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53, y: -15}
-  m_SizeDelta: {x: 485, y: 80}
+  m_AnchoredPosition: {x: 53, y: -14}
+  m_SizeDelta: {x: 485, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4124404097306994600
 CanvasRenderer:
@@ -2179,7 +2179,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -2190,7 +2190,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: A very smart little fish that is always watching in the surroundings, helps
     a lot in battles because it manages to store everything that is harvested, it
     will be very useful because I just choose what I have and ask him to attack,
@@ -2339,7 +2339,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
@@ -2466,8 +2466,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -91, y: 40}
-  m_SizeDelta: {x: 200, y: 25}
+  m_AnchoredPosition: {x: 10, y: 40}
+  m_SizeDelta: {x: 400, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8712652175328617327
 CanvasRenderer:
@@ -2498,7 +2498,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2842,18 +2842,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
-    m_FontSize: 10
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
+    m_FontSize: 9
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: "Yes daily! I did not write wrong, I found Curupira TODAY! \r\n\nImportant
     notes: It launches very strong gusts of wind, if I get hit I can hurt myself
     badly, I can not waver! One good thing is that the fire-haired creature has popcorn
@@ -2933,8 +2933,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 306.50003, y: -205.50317}
-  m_SizeDelta: {x: 620, y: 130}
+  m_AnchoredPosition: {x: 306.50003, y: -221}
+  m_SizeDelta: {x: 620, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2393012272804257148
 CanvasRenderer:
@@ -3885,7 +3885,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -3965,7 +3965,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -4297,7 +4297,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -4377,7 +4377,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -4570,7 +4570,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
@@ -4808,7 +4808,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -4819,7 +4819,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: "Banana arremess\xE1vel. Possui dano menor mas pode ser recuperada ap\xF3s
     alguns segundos.Rica em pot\xE1ssio. Tempo de recupera\xE7\xE3o: 2 segundos"
 --- !u!1 &5877334877410693045
@@ -5056,7 +5056,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -5067,7 +5067,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 'Magic corn seeds that shoot popcorn at high cadence. Ready to pop up.
     Growing time: grows every 1 day'
 --- !u!1 &6453935695700002421
@@ -5177,8 +5177,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
-    m_FontSize: 10
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
+    m_FontSize: 9
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -5188,7 +5188,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: "She's different from everyone else, she looks more human even though she
     has that big alligator snout, her big teeth look like they're going to swallow
     me! Finding the golden bananarang and more other weapons in the forest is the
@@ -5348,7 +5348,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -5359,7 +5359,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 'Throwable explosive made of potatoes. Weapon with great damage and considerable
     range range, perfect for frying multiple enemies. Growing time: grows every 12
     hours'
@@ -5588,7 +5588,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -5634,8 +5634,8 @@ RectTransform:
   m_Father: {fileID: 3159079138171195536}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.06666666}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0.000015258789, y: -0.000030517578}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5821,7 +5821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245, y: 0}
+  m_AnchoredPosition: {x: -245, y: 21}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5282800511053897112
@@ -6087,7 +6087,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 67344766409660146a9163bc3a910bd0, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -6098,7 +6098,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: Diary, always has how to get worse, I met an old man who was also turned
     into a cat, the same way I, apparently he is very crazy, half forgotten and cowardly,
     but has a little wisdom and will help me get out of this place
@@ -6169,7 +6169,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -6294,8 +6294,8 @@ RectTransform:
   m_Father: {fileID: 5816295402802749995}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.6}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0.000015258789, y: -0.000030517578}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6441,7 +6441,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -6490,9 +6490,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &3494515307160363259
 CanvasRenderer:
@@ -6612,7 +6612,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6cebc69e4c25cee45a3272e9176ad17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c49ed298d48d914ca9e4aded0c5a25b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
