@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class StoryScript : MonoBehaviour
 {
     public Canvas canvas;
     public DataStory dataStory;
     public Image imgStory;
-    public Text txtStory;
+    public TextMeshProUGUI txtStory;
 
     public string sceneName = "";
     private int curIndex = 0;

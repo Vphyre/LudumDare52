@@ -13,35 +13,45 @@ MonoBehaviour:
   m_Name: InitialDataStory
   m_EditorClassIdentifier: 
   listStoryImages:
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
-  - {fileID: 21300000, guid: e2cf37687f314154fa00ccc464357a56, type: 3}
+  - {fileID: 21300000, guid: a4b09f3b05e6be144bb1c60deebcead8, type: 3}
+  - {fileID: 21300000, guid: 105fc0eb2f9a74b43a3be4665affcb37, type: 3}
+  - {fileID: 21300000, guid: 03893c3b5eeab2749bd96742e4d1848c, type: 3}
+  - {fileID: 21300000, guid: 6ee70c0d315d22a418e1cd7cc0dcd05b, type: 3}
+  - {fileID: 21300000, guid: 01f6e9d9b2cc177499ff75b5c2050678, type: 3}
+  - {fileID: 21300000, guid: 9f3a4a351675394449224d0bb5fc2329, type: 3}
+  - {fileID: 21300000, guid: 562caa4727e2c514d8dc2827fda798e9, type: 3}
+  - {fileID: 21300000, guid: 30aac6e86106ca743a58adae2d830972, type: 3}
+  - {fileID: 21300000, guid: b2a631e8603619e4092cbb771079f083, type: 3}
+  - {fileID: 21300000, guid: 625c6f76c334dc24a80b67cbe1bf7d9a, type: 3}
+  - {fileID: 21300000, guid: 625c6f76c334dc24a80b67cbe1bf7d9a, type: 3}
+  - {fileID: 21300000, guid: c3ffccdb51d51da4dbfe2f432cedb96f, type: 3}
+  - {fileID: 21300000, guid: 625c6f76c334dc24a80b67cbe1bf7d9a, type: 3}
+  - {fileID: 21300000, guid: c710df73e850ef34b8c93a56e7652ebc, type: 3}
+  - {fileID: 21300000, guid: f299890fcf6b68944854c51d621b5c1e, type: 3}
+  - {fileID: 21300000, guid: c710df73e850ef34b8c93a56e7652ebc, type: 3}
+  - {fileID: 21300000, guid: f299890fcf6b68944854c51d621b5c1e, type: 3}
+  - {fileID: 21300000, guid: f299890fcf6b68944854c51d621b5c1e, type: 3}
+  - {fileID: 21300000, guid: 625c6f76c334dc24a80b67cbe1bf7d9a, type: 3}
+  - {fileID: 21300000, guid: 625c6f76c334dc24a80b67cbe1bf7d9a, type: 3}
+  - {fileID: 21300000, guid: 625c6f76c334dc24a80b67cbe1bf7d9a, type: 3}
+  - {fileID: 21300000, guid: 581f8b81fe0be824bb918b6a39ebfc60, type: 3}
+  - {fileID: 21300000, guid: 94aaad5350d3ba54b89cd1b9fecca9a0, type: 3}
   listStoryTexts:
   - Kon is a free-spirited adventurer, who used to travel the world and had been
-    riding a motorcycle on the roads in the interior of Brazil for a year. It was
-    Friday the thirteenth in the afternoon when his vehicle's tire went flat and
-    he was forced to stop on the side of the road. As it gets dark and with no place
-    to spend the night, he visualizes a dirt road that takes him to a small besieging
-    village. He tries to seek help from the residents, but does not see anyone, so
-    he decides to approach the door of one of the farthest houses and realizes that
-    it is ajar, seeing lights calls again, and once again there is no answer.
+    riding a motorcycle on the roads in the interior of Brazil for a year.
+  - It was Friday the thirteenth in the afternoon when his vehicle's tire went flat
+    and he was forced to stop on the side of the road.
+  - As it gets dark and with no place to spend the night, he visualizes a dirt road
+    that takes him to a small besieging village.
+  - 'He tries to seek help from the residents, but does not see anyone, so he decides
+    to approach the door of one of the farthest houses and realizes that it is ajar,
+    seeing lights calls again, and once again there is no answer. '
   - The brave man enters the small house still afraid and goes towards the only illuminated
-    room, to his surprise, he ends up finding a cat figurine on top of a table next
-    to a candle, curious takes the object, and then begins to feel an intense headache
-    until falling unconscious on the floor.
+    room.
+  - To his surprise, he ends up finding a cat figurine on top of a table next to
+    a candle.
+  - curious, he takes the object...
+  - ' then begins to feel an intense headache until falling unconscious on the floor. '
   - Upon receiving the first rays of sunlight of the day, the young man gradually
     regains his consciousness and realizes that something different has happened,
     his arms were covered in dark and silky hair, his feet and hands were now in
@@ -62,7 +72,7 @@ MonoBehaviour:
   - "-\tFinally, we've been waiting for years for you to join us. Welcome! I'm Nyantonio
     - the strange cat points to the floating being beside him - and this one is the
     number one helper of the Mother of Water, Dourado -, I've been taking care of
-    this village for centuries."
+    this village for centuries. "
   - "-\tWhere am I? What am I? - said Kon, still visibly stunned- what am I doing
     here?"
   - "-\tI'll explain everything to you, you..."
@@ -91,13 +101,13 @@ MonoBehaviour:
   - "-\tMy young man, these are magic seeds to help you in this mission - the old
     man then starts showing one by one - This is the one fromimprover, as you can
     see, it's a fast weapon that shreds popcorn, but it grows every day;is here is
-    the potatobom, You can tell by the name what it does, right? Grow every twelve
-    hours, just throw it and\u2026boom! Ah, this one is my favorite,Cenorai -(laughs)-
-    which grows every hour and always in large numbers, we can always have a hand
-    when the guardians appear, and finally this is the banana orange which grows
-    quickly and you will never be disarmed if you have it, but its damage is very
-    small. But since not everything is perfect, unfortunately our weapons rot very
-    quickly, so we always have to plant them, good luck\u2026"
+    the potatobom, You can tell by the name what it does, right?"
+  - "-\tIt will Grow every twelve hours, just throw it and\u2026boom! Ah, this one
+    is my favorite, Cenorai -(laughs)- which grows every hour and always in large
+    numbers, we can always have a hand when the guardians appear, and finally this
+    is the banana orange which grows quickly and you will never be disarmed if you
+    have it, but its damage is very small. But since not everything is perfect, unfortunately
+    our weapons rot very quickly, so we always have to plant them, good luck\u2026"
   - "-\tOh holy cat! I'm lost! - exclaims Kon with great concern."
   - 'With the bag in its paws, the young cat heads towards the plantation area -Since
     there''s no other way, I''m going for it! '
