@@ -5,16 +5,20 @@ using UnityEngine;
 public class TeleportModule : MonoBehaviour
 {
     [SerializeField] private float _teleportTimeRange;
-    [SerializeField] private List<Transform> _upPositions;
-    [SerializeField] private List<Transform> _downPositions;
-    [SerializeField] private List<Transform> _leftPositions;
-    [SerializeField] private List<Transform> _rightPositions;
+    [SerializeField] private GameObject[] _upPositions;
+    [SerializeField] private GameObject[] _downPositions;
+    [SerializeField] private GameObject[] _leftPositions;
+    [SerializeField] private GameObject[] _rightPositions;
     private int currentSidePositon;
 
     private void Start()
     {
         currentSidePositon = 1;
         InvokeRepeating("Teleport", 0, _teleportTimeRange);
+        _upPositions = GameObject.FindGameObjectsWithTag("UP");
+        _downPositions = GameObject.FindGameObjectsWithTag("DOWN");
+        _leftPositions = GameObject.FindGameObjectsWithTag("LEFT");
+        _rightPositions = GameObject.FindGameObjectsWithTag("RIGHT");
     }
     private void Teleport()
     {
@@ -23,19 +27,19 @@ public class TeleportModule : MonoBehaviour
 
         if (currentSidePositon == 0)
         {
-            this.transform.position = _upPositions[Random.Range(0, _upPositions.Count - 1)].position;
+            this.transform.position = _upPositions[Random.Range(0, _upPositions.Length - 1)].transform.position;
         }
         else if (currentSidePositon == 1)
         {
-            this.transform.position = _downPositions[Random.Range(0, _downPositions.Count - 1)].position;
+            this.transform.position = _downPositions[Random.Range(0, _downPositions.Length - 1)].transform.position;
         }
         else if (currentSidePositon == 2)
         {
-            this.transform.position = _leftPositions[Random.Range(0, _leftPositions.Count - 1)].position;
+            this.transform.position = _leftPositions[Random.Range(0, _leftPositions.Length - 1)].transform.position;
         }
         else if (currentSidePositon == 3)
         {
-            this.transform.position = _rightPositions[Random.Range(0, _rightPositions.Count - 1)].position;
+            this.transform.position = _rightPositions[Random.Range(0, _rightPositions.Length - 1)].transform.position;
         }
     }
     private int VerifySide(int drawnSide)

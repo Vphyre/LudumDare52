@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private float speed;
     // vida
     [SerializeField]
-    private int life;
+    public int life;
     //chamando script do game over
     private GameOver Ds;
     private Rigidbody2D rbp;
@@ -18,13 +18,13 @@ public class Player : MonoBehaviour
     private Animator anim;
     [Header("Danos dos chefes")]
     [Header("Chefe 1")]
-    [SerializeField] private int MinDamage1;
+    public int MinDamage1;
     [SerializeField] private int MaxDamage1;
     [Header("chefe 2")]
-    [SerializeField] private int MinDamage2;
+    public int MinDamage2;
     [SerializeField] private int MaxDamage2;
     [Header("chefe 3")]
-    [SerializeField] private int MinDamage3;
+    public int MinDamage3;
     [SerializeField] private int MaxDamage3;
 
     void Start()
@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         rbp= GetComponent<Rigidbody2D>();
+        LifeTxt = GameObject.FindGameObjectWithTag("LifeText").GetComponent<Text>();
 
     }
 
@@ -41,7 +42,7 @@ public class Player : MonoBehaviour
     {
         if (LifeTxt != null)
         {
-            LifeTxt.text = life.ToString();
+            LifeTxt.text = "LIFE: " + life.ToString();
         }
 
         Vector3 v = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);

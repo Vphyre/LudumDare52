@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -15,8 +16,9 @@ public class GameManager : Singleton<GameManager>
 
     protected override void Awake()
     {
-        IsPersistentBetweenScenes = true;
+        IsPersistentBetweenScenes = false;
         base.Awake();
+        Time.timeScale = 1f;
     }
 
     public void DayCicle()
@@ -40,6 +42,10 @@ public class GameManager : Singleton<GameManager>
             candleObject.SetActive(true);
             player.transform.position = teleportPosition.position;
         }
+    }
+    public void LoadEnd(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
 

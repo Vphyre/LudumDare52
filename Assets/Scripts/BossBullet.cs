@@ -12,7 +12,7 @@ public class BossBullet : MonoBehaviour
     {
         rb= GetComponent<Rigidbody2D>();
         tr=GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        InvokeRepeating("TiroBoss", 1,0);
+        InvokeRepeating("TiroBoss", 0,0);
     }
 
     // Update is called once per frame
@@ -31,6 +31,7 @@ public class BossBullet : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            col.gameObject.GetComponent<Player>().life -= Random.Range(5, 15);
             Destroy(gameObject);
         }
         if (col.gameObject.CompareTag("bullet"))

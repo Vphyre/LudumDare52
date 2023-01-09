@@ -7,15 +7,15 @@ public class GameOver : MonoBehaviour
 {
     [SerializeField]
     private GameObject obj;
-    //função de game over
-  public void GO()
+    //funï¿½ï¿½o de game over
+    public void GO()
     {
-       obj.SetActive(true);
+        obj.SetActive(true);
         Time.timeScale = 0f;
     }
-    public void reload() 
+    public void reload()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Gameplay");
         Time.timeScale = 1f;
     }
 

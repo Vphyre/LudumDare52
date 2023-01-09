@@ -10,21 +10,24 @@ public class Bullet : MonoBehaviour
     private float DestroyBulletTM;
     public string bulletName;
     public SpriteRenderer spriteRenderer;
+    public int damage;
     void Start()
     {
-      if (InventorySystem.Instance.selectedBullet) {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        bulletName = InventorySystem.Instance.selectedBullet.bulletName;
-        Bulletspeed = InventorySystem.Instance.selectedBullet.speed; 
-        spriteRenderer.sprite = InventorySystem.Instance.selectedBullet.projectileImage;
-      }
+        if (InventorySystem.Instance.selectedBullet)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            bulletName = InventorySystem.Instance.selectedBullet.bulletName;
+            Bulletspeed = InventorySystem.Instance.selectedBullet.speed;
+            spriteRenderer.sprite = InventorySystem.Instance.selectedBullet.projectileImage;
+            damage = InventorySystem.Instance.selectedBullet.damage;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-      transform.Translate(Vector2.right * Bulletspeed * Time.deltaTime, Space.Self);
-        
+        transform.Translate(Vector2.right * Bulletspeed * Time.deltaTime, Space.Self);
+
         Destroy(gameObject, DestroyBulletTM);
-    } 
+    }
 }

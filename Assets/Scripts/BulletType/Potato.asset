@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d4b9b4b23c921498bd32f80d505edb, type: 3}
   m_Name: Potato
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 30
   speed: 10
   bulletName: potato
   areaOfEffect: 5

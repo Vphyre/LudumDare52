@@ -9,6 +9,11 @@ TagManager:
   - Boss1
   - Boss2
   - Boss3
+  - UP
+  - DOWN
+  - LEFT
+  - RIGHT
+  - LifeText
   layers:
   - Default
   - TransparentFX
@@ -16,8 +21,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Boss
+  - BossBullet
   - 
   - 
   - 

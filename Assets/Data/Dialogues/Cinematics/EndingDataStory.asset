@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: EndingDataStory
   m_EditorClassIdentifier: 
   listStoryImages:
-  - {fileID: 21300000, guid: 8a26d71e290bf434f95d3b90bfe7efe4, type: 3}
-  - {fileID: 21300000, guid: 8a26d71e290bf434f95d3b90bfe7efe4, type: 3}
-  - {fileID: 21300000, guid: 8a26d71e290bf434f95d3b90bfe7efe4, type: 3}
-  - {fileID: 21300000, guid: 8a26d71e290bf434f95d3b90bfe7efe4, type: 3}
-  - {fileID: 21300000, guid: 8a26d71e290bf434f95d3b90bfe7efe4, type: 3}
-  - {fileID: 21300000, guid: 8a26d71e290bf434f95d3b90bfe7efe4, type: 3}
+  - {fileID: 21300000, guid: ffa9b36f0f744e14db7f13d4adbd39b2, type: 3}
+  - {fileID: 21300000, guid: ffa9b36f0f744e14db7f13d4adbd39b2, type: 3}
+  - {fileID: 21300000, guid: ffa9b36f0f744e14db7f13d4adbd39b2, type: 3}
+  - {fileID: 21300000, guid: ffa9b36f0f744e14db7f13d4adbd39b2, type: 3}
+  - {fileID: 21300000, guid: ffa9b36f0f744e14db7f13d4adbd39b2, type: 3}
+  - {fileID: 21300000, guid: ffa9b36f0f744e14db7f13d4adbd39b2, type: 3}
   listStoryTexts:
   - After defeating the last of the guardians, Kon realizes that nothing happened
     and that he is still a cat, very disappointed.look for theNyantonio and realizes
