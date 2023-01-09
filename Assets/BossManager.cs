@@ -19,6 +19,7 @@ public class BossManager : MonoBehaviour
         if (index == 3)
         {
             GameManager.Instance.LoadEnd("FinalStoryScene");
+            return;
         }
         Debug.Log("Proximo Boss");
         bosses[index].SetActive(true);

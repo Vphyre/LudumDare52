@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     public string bulletName;
     public SpriteRenderer spriteRenderer;
     public int damage;
+    public float timer = 0;
     void Start()
     {
         if (InventorySystem.Instance.selectedBullet)
@@ -23,11 +24,17 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    private void OnEnable() {
+      timer = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector2.right * Bulletspeed * Time.deltaTime, Space.Self);
-
-        Destroy(gameObject, DestroyBulletTM);
+        timer += Time.deltaTime;
+        if (timer >= DestroyBulletTM) {
+          gameObject.SetActive(false);
+        }
     }
 }

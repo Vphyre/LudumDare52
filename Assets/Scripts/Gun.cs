@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private GameObject projetil;
      private float time =0;
     [SerializeField] private float timebts;
+    public ObjectPool pool;
 
     // Update is called once per frame
     void Update()
@@ -20,7 +21,10 @@ public class Gun : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && InventorySystem.Instance.selectedBullet)
             {
-                Instantiate(projetil, GunPoint.position, transform.rotation);
+                GameObject bullet = pool.GetPooledObject();
+                bullet.transform.position = GunPoint.position;
+                bullet.transform.rotation = transform.rotation;
+                bullet.gameObject.SetActive(true);
                 InventorySystem.Instance.UseBullet();
                 time = Time.time + timebts;
             }
