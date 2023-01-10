@@ -22,6 +22,7 @@ public class InventorySystem : Singleton<InventorySystem>
     public BulletType greenBananaBullet;
     public BulletType yellowBananaBullet;
     public bool hasGoldenBanana = false;
+    public bool hasGreenBanana = false;
 
     protected override void Awake()
     {
@@ -51,7 +52,10 @@ public class InventorySystem : Singleton<InventorySystem>
                 break;
             case "goldenBanana":
                 hasGoldenBanana = true;
-                Debug.Log("BANANA");
+                UIManager.Instance.UpdateWeaponUI();
+                break;
+            case "greenBanana":
+                hasGreenBanana = true;
                 UIManager.Instance.UpdateWeaponUI();
                 break;
             default:

@@ -44,18 +44,25 @@ public class UIManager : Singleton<UIManager>
         base.Awake();
     }
 
-    private void Start() {
+    private void Start()
+    {
         timeLeft = DayNightSystem.Instance.dayTime;
     }
 
-    private void Update() {
-        if (isDay) {
-            if (timeLeft > 0) {
+    private void Update()
+    {
+        if (isDay)
+        {
+            if (timeLeft > 0)
+            {
                 timeLeft -= Time.deltaTime;
                 timeCounter.text = "Time to night: " + (Mathf.Ceil(timeLeft)).ToString();
             }
-        } else {
-            if (timeLeft > 0) {
+        }
+        else
+        {
+            if (timeLeft > 0)
+            {
                 timeLeft -= Time.deltaTime;
                 timeCounter.text = "Time to day: " + (Mathf.Ceil(timeLeft)).ToString();
             }
@@ -178,7 +185,7 @@ public class UIManager : Singleton<UIManager>
         {
             potatoWeapon.interactable = true;
         }
-        if(InventorySystem.Instance.hasGoldenBanana == false)
+        if (InventorySystem.Instance.hasGoldenBanana == false)
         {
             yellowBananWeapon.interactable = false;
             activeYellowBananaWeapon.SetActive(false);
@@ -187,7 +194,15 @@ public class UIManager : Singleton<UIManager>
         {
             yellowBananWeapon.interactable = true;
         }
-
+        if (InventorySystem.Instance.hasGreenBanana == false)
+        {
+            greenBananaWeapon.interactable = false;
+            activeGreenBananaWeapon.SetActive(false);
+        }
+        else
+        {
+            greenBananaWeapon.interactable = true;
+        }
     }
 
     public void SelectWeapon(string bulletName)
@@ -278,14 +293,16 @@ public class UIManager : Singleton<UIManager>
         InventorySystem.Instance.SelectWeapon(bulletName);
     }
 
-    public void DayCicle () {
+    public void DayCicle()
+    {
         dayCount++;
         daysPassed.text = "Days: " + dayCount.ToString();
         isDay = true;
         timeLeft = DayNightSystem.Instance.dayTime;
     }
 
-    public void NightCicle() {
+    public void NightCicle()
+    {
         isDay = false;
         timeLeft = DayNightSystem.Instance.nightTime;
     }
