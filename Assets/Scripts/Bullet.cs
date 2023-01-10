@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -26,6 +24,15 @@ public class Bullet : MonoBehaviour
 
     private void OnEnable() {
       timer = 0;
+      if (InventorySystem.Instance.selectedBullet)
+        {
+            bulletName = InventorySystem.Instance.selectedBullet.bulletName;
+            Bulletspeed = InventorySystem.Instance.selectedBullet.speed;
+            if(spriteRenderer) {
+              spriteRenderer.sprite = InventorySystem.Instance.selectedBullet.projectileImage;
+            }
+            damage = InventorySystem.Instance.selectedBullet.damage;
+        }
     }
 
     // Update is called once per frame
