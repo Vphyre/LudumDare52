@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     [Header("chefe 3")]
     public int MinDamage3;
     [SerializeField] private int MaxDamage3;
+    public GameObject statusUI;
 
     void Start()
     {
@@ -35,6 +36,10 @@ public class Player : MonoBehaviour
         rbp= GetComponent<Rigidbody2D>();
         LifeTxt = GameObject.FindGameObjectWithTag("LifeText").GetComponent<Text>();
 
+        if (statusUI != null)
+        {
+            statusUI.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -66,6 +71,20 @@ public class Player : MonoBehaviour
         {
             sr.flipX = false;
 
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (statusUI != null)
+            {
+                if (statusUI.activeSelf)
+                {
+                    statusUI.SetActive(false);
+                }
+                else
+                {
+                    statusUI.SetActive(true);
+                }
+            }
         }
 
         if (life <= 0)

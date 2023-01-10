@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class TutorialScript : MonoBehaviour
 {
-    public Canvas canvas;
     public void Close()
     {
-        canvas.enabled = false;
+        this.gameObject.SetActive(false);
     }
 }
