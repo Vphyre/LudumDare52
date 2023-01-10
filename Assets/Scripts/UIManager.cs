@@ -213,7 +213,7 @@ public class UIManager : Singleton<UIManager>
                 if (actualSelectedWeapon == "corn")
                 {
                     activeCornWeapon.SetActive(false);
-                    actualSelectedSeed = "";
+                    actualSelectedWeapon = "";
                 }
                 else
                 {
@@ -254,7 +254,7 @@ public class UIManager : Singleton<UIManager>
                     activePotatoWeapon.SetActive(true);
                     activeGreenBananaWeapon.SetActive(false);
                     activeYellowBananaWeapon.SetActive(false);
-                    actualSelectedSeed = "potato";
+                    actualSelectedWeapon = "potato";
                 }
                 break;
             case "greenBanana":
@@ -270,7 +270,7 @@ public class UIManager : Singleton<UIManager>
                     activePotatoWeapon.SetActive(false);
                     activeGreenBananaWeapon.SetActive(true);
                     activeYellowBananaWeapon.SetActive(false);
-                    actualSelectedSeed = "greenBanana";
+                    actualSelectedWeapon = "greenBanana";
                 }
                 break;
             case "yellowBanana":
@@ -286,7 +286,7 @@ public class UIManager : Singleton<UIManager>
                     activePotatoWeapon.SetActive(false);
                     activeGreenBananaWeapon.SetActive(false);
                     activeYellowBananaWeapon.SetActive(true);
-                    actualSelectedSeed = "yellowBanana";
+                    actualSelectedWeapon = "yellowBanana";
                 }
                 break;
         }
