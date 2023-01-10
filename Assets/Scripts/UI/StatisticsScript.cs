@@ -65,5 +65,6 @@ public class StatisticsScript : MonoBehaviour
     public void Close()
     {
         this.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

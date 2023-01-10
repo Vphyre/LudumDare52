@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
     public Transform teleportPosition;
     public GameObject candleObject;
     public int daysToShowBoss;
+    public bool inBoss = false;
 
     protected override void Awake()
     {
@@ -37,15 +38,20 @@ public class GameManager : Singleton<GameManager>
     }
     public void VerifyBoss()
     {
-        if (dayCount == daysToShowBoss)
+        if (dayCount == daysToShowBoss && inBoss == false)
         {
-            candleObject.SetActive(true);
-            player.transform.position = teleportPosition.position;
+            ShowBoss();
         }
     }
     public void LoadEnd(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+    public void ShowBoss()
+    {
+        candleObject.SetActive(true);
+        player.transform.position = teleportPosition.position;
+        inBoss = true;
     }
 }
 
