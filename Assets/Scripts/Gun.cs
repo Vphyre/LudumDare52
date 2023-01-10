@@ -9,18 +9,20 @@ public class Gun : MonoBehaviour
     [SerializeField] private float offset;
     [SerializeField] private Transform GunPoint;
     [SerializeField] private GameObject projetil;
-     private float time =0;
+    private float time =0;
     [SerializeField] private float timebts;
     public ObjectPool pool;
 
     // Update is called once per frame
     void Update()
     {
+        
         Mira();
         if (Time.time > time)
         {
             if (Input.GetMouseButtonDown(0) && InventorySystem.Instance.selectedBullet)
             {
+                timebts = InventorySystem.Instance.selectedBullet.fireRate;
                 GameObject bullet = pool.GetPooledObject();
                 bullet.transform.position = GunPoint.position;
                 bullet.transform.rotation = transform.rotation;

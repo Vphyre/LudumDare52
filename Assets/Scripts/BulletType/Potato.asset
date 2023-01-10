@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d4b9b4b23c921498bd32f80d505edb, type: 3}
   m_Name: Potato
   m_EditorClassIdentifier: 
-  damage: 30
+  damage: 35
   speed: 10
+  fireRate: 2
   bulletName: potato
   areaOfEffect: 5
   projectileImage: {fileID: 21300000, guid: 8b9bf4b45c148734e8a6cd478cc1d014, type: 3}

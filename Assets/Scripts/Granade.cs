@@ -5,35 +5,24 @@ using UnityEngine;
 public class Granade : MonoBehaviour
 {
     [SerializeField]
-    private float Bulletspeed;
-    [SerializeField]
-    private float DestroyBulletTM;
-    [SerializeField]
-    private bool stoopGr = false;
-    [SerializeField]
     private GameObject explosion;
-    void Start()
+    GameObject obj;
+    private void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        explosion.SetActive(false);
-        Invoke("Stop", 2f);
+        if(InventorySystem.Instance.selectedBullet == null)
+        {
+            return;
+        }
+        if(obj != null || InventorySystem.Instance.selectedBullet.areaOfEffect == 0)
+        {
+            return;
+        }
+       
+        obj = Instantiate(explosion);
+        obj.SetActive(true);
+        obj.transform.position = this.transform.position;
+        obj.transform.rotation = Quaternion.identity;
+        Destroy(obj, 3f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (stoopGr == false)
-        {
-            transform.Translate(Vector2.right * Bulletspeed * Time.deltaTime, Space.Self);
-        }
-    }
-    private void Explode()
-    {
-      explosion.SetActive(true);
-        Destroy(gameObject,DestroyBulletTM);
-    }
-    private void Stop()
-    {
-        stoopGr = true;
-        Invoke("Explode", 1f);
-    }
 }

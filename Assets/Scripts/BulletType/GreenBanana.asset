@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d4b9b4b23c921498bd32f80d505edb, type: 3}
   m_Name: GreenBanana
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 3
   speed: 25
+  fireRate: 2
   bulletName: greenBanana
   areaOfEffect: 0
   projectileImage: {fileID: 21300000, guid: 05c7fc6172ec54f43a0e480eb7aa6ea2, type: 3}

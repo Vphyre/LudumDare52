@@ -14,6 +14,7 @@ TagManager:
   - LEFT
   - RIGHT
   - LifeText
+  - Fire
   layers:
   - Default
   - TransparentFX
