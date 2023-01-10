@@ -79,10 +79,12 @@ public class Player : MonoBehaviour
                 if (statusUI.activeSelf)
                 {
                     statusUI.SetActive(false);
+                    Time.timeScale = 1f;
                 }
                 else
                 {
                     statusUI.SetActive(true);
+                    Time.timeScale = 0f;
                 }
             }
         }

@@ -18,7 +18,7 @@ public class GameManager : Singleton<GameManager>
     {
         IsPersistentBetweenScenes = false;
         base.Awake();
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
     }
 
     public void DayCicle()

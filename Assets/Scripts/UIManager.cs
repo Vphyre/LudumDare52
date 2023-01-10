@@ -178,6 +178,16 @@ public class UIManager : Singleton<UIManager>
         {
             potatoWeapon.interactable = true;
         }
+        if(InventorySystem.Instance.hasGoldenBanana == false)
+        {
+            yellowBananWeapon.interactable = false;
+            activeYellowBananaWeapon.SetActive(false);
+        }
+        else
+        {
+            yellowBananWeapon.interactable = true;
+        }
+
     }
 
     public void SelectWeapon(string bulletName)

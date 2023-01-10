@@ -21,185 +21,237 @@ public class InventorySystem : Singleton<InventorySystem>
     public BulletType potatoBullet;
     public BulletType greenBananaBullet;
     public BulletType yellowBananaBullet;
+    public bool hasGoldenBanana = false;
 
-    protected override void Awake() {
+    protected override void Awake()
+    {
         IsPersistentBetweenScenes = false;
         base.Awake();
     }
 
-    private void Start() {
+    private void Start()
+    {
         UIManager.Instance.UpdateSeedUI();
         UIManager.Instance.UpdateWeaponUI();
     }
 
-    public void AddSeed (Seed seed) {
+    public void AddSeed(Seed seed)
+    {
         seeds.Add(seed);
-        switch(seed.seedName) {
-            case "potato": 
+        switch (seed.seedName)
+        {
+            case "potato":
                 potatoSeedQtd++;
-            break;
+                break;
             case "corn":
                 cornSeedQtd++;
-            break;
+                break;
             case "carrot":
                 carrotSeedQtd++;
-            break;
+                break;
+            case "goldenBanana":
+                hasGoldenBanana = true;
+                Debug.Log("BANANA");
+                UIManager.Instance.UpdateWeaponUI();
+                break;
             default:
-            break;
+                break;
         }
         UIManager.Instance.UpdateSeedUI();
     }
 
-    public void AddBullets (Seed seed) {
-        switch(seed.seedName) {
-            case "potato": 
+    public void AddBullets(Seed seed)
+    {
+        switch (seed.seedName)
+        {
+            case "potato":
                 potatoBullets += seed.bulletsPerPlant;
-            break;
+                break;
             case "corn":
                 cornBullets += seed.bulletsPerPlant;
-            break;
+                break;
             case "carrot":
                 carrotBullets += seed.bulletsPerPlant;
-            break;
+                break;
             default:
-            break;
+                break;
         }
-        UIManager.Instance.UpdateWeaponUI(); 
+        UIManager.Instance.UpdateWeaponUI();
     }
 
-        public BulletType UseBullet () {
-        if (!selectedBullet) {
+    public BulletType UseBullet()
+    {
+        if (!selectedBullet)
+        {
             return null;
         }
         BulletType oldBullet = selectedBullet;
-        switch(oldBullet.bulletName) {
-            case "potato": 
+        switch (oldBullet.bulletName)
+        {
+            case "potato":
                 potatoBullets--;
-                if (potatoBullets == 0) {
+                if (potatoBullets == 0)
+                {
                     selectedBullet = null;
                 }
-            break;
+                break;
             case "corn":
                 cornBullets--;
-                if (cornBullets == 0) {
+                if (cornBullets == 0)
+                {
                     selectedBullet = null;
                 }
-            break;
+                break;
             case "carrot":
                 carrotBullets--;
-                if (carrotBullets == 0) {
+                if (carrotBullets == 0)
+                {
                     selectedBullet = null;
                 }
-            break;
+                break;
             default:
-            break;
+                break;
         }
         UIManager.Instance.UpdateWeaponUI();
         return oldBullet;
     }
 
 
-// SELECT BULLET VAI TER O TIPO SELECIONADO ATUAL, UTILIZAR PARA TROCAR A BALA DO PERSONAGEM
-// TERÁ Q SER CRIADO UM TIPO DE BALA PRA CADA PARA SABERMOS O QUE UTILIZAR.
-        public void SelectWeapon (string weaponName) {
-        switch(weaponName) {
-            case "potato": 
-                if(selectedBullet && selectedBullet.bulletName == weaponName) {
+    // SELECT BULLET VAI TER O TIPO SELECIONADO ATUAL, UTILIZAR PARA TROCAR A BALA DO PERSONAGEM
+    // TERÁ Q SER CRIADO UM TIPO DE BALA PRA CADA PARA SABERMOS O QUE UTILIZAR.
+    public void SelectWeapon(string weaponName)
+    {
+        switch (weaponName)
+        {
+            case "potato":
+                if (selectedBullet && selectedBullet.bulletName == weaponName)
+                {
                     selectedBullet = null;
-                } else {
+                }
+                else
+                {
                     selectedBullet = potatoBullet;
                 }
-            break;
+                break;
             case "corn":
-                if(selectedBullet && selectedBullet.bulletName == weaponName) {
+                if (selectedBullet && selectedBullet.bulletName == weaponName)
+                {
                     selectedBullet = null;
-                } else {
+                }
+                else
+                {
                     selectedBullet = cornBullet;
                 }
-            break;
+                break;
             case "carrot":
-                if(selectedBullet && selectedBullet.bulletName == weaponName) {
+                if (selectedBullet && selectedBullet.bulletName == weaponName)
+                {
                     selectedBullet = null;
-                } else {
+                }
+                else
+                {
                     selectedBullet = carrotBullet;
                 }
-            break;
+                break;
             case "greenBanana":
-                if(selectedBullet && selectedBullet.bulletName == weaponName) {
+                if (selectedBullet && selectedBullet.bulletName == weaponName)
+                {
                     selectedBullet = null;
-                } else {
+                }
+                else
+                {
                     selectedBullet = greenBananaBullet;
                 }
-            break;
+                break;
             case "yellowBanana":
-                if(selectedBullet && selectedBullet.bulletName == weaponName) {
+                if (selectedBullet && selectedBullet.bulletName == weaponName)
+                {
                     selectedBullet = null;
-                } else {
+                }
+                else
+                {
                     selectedBullet = yellowBananaBullet;
                 }
-            break;
+                break;
             default:
-            break;
+                break;
         }
     }
 
-    public Seed UseSeed () {
-        if (!selectedSeed) {
+    public Seed UseSeed()
+    {
+        if (!selectedSeed)
+        {
             return null;
         }
         Seed oldSeed = selectedSeed;
         seeds.Remove(selectedSeed);
-        switch(oldSeed.seedName) {
-            case "potato": 
+        switch (oldSeed.seedName)
+        {
+            case "potato":
                 potatoSeedQtd--;
-                if (potatoSeedQtd == 0) {
+                if (potatoSeedQtd == 0)
+                {
                     selectedSeed = null;
                 }
-            break;
+                break;
             case "corn":
                 cornSeedQtd--;
-                if (cornSeedQtd == 0) {
+                if (cornSeedQtd == 0)
+                {
                     selectedSeed = null;
                 }
-            break;
+                break;
             case "carrot":
                 carrotSeedQtd--;
-                if (carrotSeedQtd == 0) {
+                if (carrotSeedQtd == 0)
+                {
                     selectedSeed = null;
                 }
-            break;
+                break;
             default:
-            break;
+                break;
         }
         UIManager.Instance.UpdateSeedUI();
         return oldSeed;
     }
 
-    public void SelectSeed (string seedName) {
-        switch(seedName) {
-            case "potato": 
-                if(selectedSeed && selectedSeed.seedName == seedName) {
+    public void SelectSeed(string seedName)
+    {
+        switch (seedName)
+        {
+            case "potato":
+                if (selectedSeed && selectedSeed.seedName == seedName)
+                {
                     selectedSeed = null;
-                } else {
+                }
+                else
+                {
                     selectedSeed = potato;
                 }
-            break;
+                break;
             case "corn":
-                if(selectedSeed && selectedSeed.seedName == seedName) {
+                if (selectedSeed && selectedSeed.seedName == seedName)
+                {
                     selectedSeed = null;
-                } else {
+                }
+                else
+                {
                     selectedSeed = corn;
                 }
-            break;
+                break;
             case "carrot":
-                if(selectedSeed && selectedSeed.seedName == seedName) {
+                if (selectedSeed && selectedSeed.seedName == seedName)
+                {
                     selectedSeed = null;
-                } else {
+                }
+                else
+                {
                     selectedSeed = carrot;
                 }
-            break;
+                break;
             default:
-            break;
+                break;
         }
     }
 }
