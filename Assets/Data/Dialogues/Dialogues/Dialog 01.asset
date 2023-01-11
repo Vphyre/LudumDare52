@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27e57f773fdc474fb2fdb1282b21b00, type: 3}
+  m_Name: Dialog 01
+  m_EditorClassIdentifier: 
+  listCharacterNames:
+  - Nyantonio
+  - Nyantonio
+  - Nyantonio
+  - Nyantonio
+  - Kon
+  - Nyantonio
+  - Dourado
+  - Dourado
+  - Nyantonio
+  - Kon
+  listDialogTexts:
+  - Wait, wait! How forgetful I am!
+  - I know you keep a diary, so you can always refer to it to remember something
+    or explain something (ESC). This little fish is enchanted, it will always be
+    with you, it will keep everything you collect and help you throw it at the enemy.
+  - Oh, one more thing! The plants will grow during the day. Take advantage of the
+    night to better explore the map, and get more seeds.
+  - 'Remember: You have 7 days to prepare yourself...'
+  - Am I going to have to be a farmer, to let it be a cat? Doesn't seem to make sense
+    to me...
+  - Don't worry, I know you can do it HAHAHA.
+  - Hey my new friend. Stop complaining and let's get to work!
+  - Cheer up... come on, get those green bananas. It will be our last resort if we
+    run out of ammo... I mean food.
+  - That's right. Make the most of it and get those seeds... Try clicking on the
+    pieces of land on the left to plant... Wait a few days, and FINISH! You will
+    be able to harvest!
+  - Okay, okay... looks like I don't have a choice. Let's go...
+  listCharacterImgs:
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}

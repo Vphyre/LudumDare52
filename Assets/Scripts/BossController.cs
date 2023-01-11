@@ -22,4 +22,8 @@ public class BossController : MonoBehaviour
             CancelInvoke();
         }
     }
+    private void OnDisable()
+    {
+        CancelInvoke();    
+    }
 }

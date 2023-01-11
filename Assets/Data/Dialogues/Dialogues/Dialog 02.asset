@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27e57f773fdc474fb2fdb1282b21b00, type: 3}
+  m_Name: Dialog 02
+  m_EditorClassIdentifier: 
+  listCharacterNames:
+  - Nyantonio
+  - Nyantonio
+  - Kon
+  - Dourado
+  - Nyantonio
+  - Kon
+  - Nyantonio
+  - Kon
+  - Dourado
+  listDialogTexts:
+  - Well, looks like you're doing well...
+  - Keep preparing yourself. By the way, whenever you want some new tip, I'll be
+    here. I like to talk during the day. I always have something new to talk about...
+  - Right, and what's today's tip, old man?
+  - Where are your manners? Nyantonio is a great scholar... You need to be more respectful
+    with him... he always has something to teach us. What is today's teaching, Master
+    Nyantonio?
+  - Yeah... I really don't have anything to say.
+  - This can only be a joke... Congratulations fish!
+  - Wait... I remembered something... When you feel ready for the challenge, you
+    can anticipate things (Now you can use the "Skip To Boss" button, in the pause
+    menu - ESC). Although I don't recommend it...
+  - Hmm... Anticipating things... looks good!
+  - We're not ready yet, feline. Let's look for more seeds to plant and harvest more.
+  listCharacterImgs:
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27e57f773fdc474fb2fdb1282b21b00, type: 3}
+  m_Name: Dialog 04
+  m_EditorClassIdentifier: 
+  listCharacterNames:
+  - Nyantonio
+  - Kon
+  - Nyantonio
+  - Dourado
+  - Nyantonio
+  - Kon
+  listDialogTexts:
+  - Hello there... By the way who are you two?
+  - What? What are you saying old man? Don't tell me you're forgetting things now?
+    I'm Kon! And that's the fish... It's the Dourado!
+  - Kon? ... Oh I... I mean, this is just a joke with you guys. HAHA.
+  - What a fright, Mr. Nyantonio! I thought the terrible fate of the Baobab tree
+    had fallen on you!
+  - Things are really strange... nowadays a potato takes 4 days to be ready for harvest...
+    Before the curse of the legends fell on these lands, you could harvest potatoes
+    with 1 day...
+  - This curse of legends gives me the shivers... I just want to be human again!
+  listCharacterImgs:
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}

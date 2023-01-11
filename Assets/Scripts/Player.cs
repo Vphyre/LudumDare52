@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
     {
         if (LifeTxt != null)
         {
-            LifeTxt.text = "LIFE: " + life.ToString();
+            LifeTxt.text = life.ToString();
         }
 
         Vector3 v = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
             sr.flipX = false;
 
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.dialogTrigger == false)
         {
             if (statusUI != null)
             {

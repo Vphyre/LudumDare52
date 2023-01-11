@@ -14,6 +14,7 @@ public class GameManager : Singleton<GameManager>
     public GameObject candleObject;
     public int daysToShowBoss;
     public bool inBoss = false;
+    public bool dialogTrigger;
 
     protected override void Awake()
     {

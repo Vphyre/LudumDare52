@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27e57f773fdc474fb2fdb1282b21b00, type: 3}
+  m_Name: Cuca
+  m_EditorClassIdentifier: 
+  listCharacterNames:
+  - Nyantonio
+  - Kon
+  - Kon
+  - Cuca
+  - Kon
+  - Cuca
+  - Kon
+  - Dourado
+  - Kon
+  - Cuca
+  listDialogTexts:
+  - We're almost there! Don't let your guard down, you've already defeated two of
+    the guardians! But this is the greatest danger of all! The mighty Cuca is coming!
+    Adventurer beware, move wisely, she is the strongest! Good luck...
+  - Yes we will make it, Nyantonio! Can you tell me what the weak point of this Cuca
+    is?
+  - Mister Nyantonio? Hey come back here! Get out of the house, don't tell me you're
+    scared!
+  - HAHAHAHA. Everyone fears my power... no need to be ashamed to admit it, kitten!
+  - I'm not afraid of you Cuca. I will defeat you...
+  - Do not be afraid? Why then are you trembling all over? It will be delicious to
+    devour you, little cat!
+  - I-I'm not... maybe I'm just feeling cold...
+  - Th-This can't be happening again... Take courage Kon. I will help you!
+  - Ah, the cat gave back your tongue, Dourado. Excellent.
+  - Silence lesser creatures! I WILL DEVOUR YOU!
+  listCharacterImgs:
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 39d3f153c8805ff4d8f77a53dd5b8f73, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 39d3f153c8805ff4d8f77a53dd5b8f73, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 39d3f153c8805ff4d8f77a53dd5b8f73, type: 3}

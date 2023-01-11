@@ -18,10 +18,14 @@ public class BossManager : MonoBehaviour
     {
         if (index == 3)
         {
+            if (PlayerPrefs.GetInt("NoDialog") > 0)
+            {
+                GameManager.Instance.LoadEnd("CreditsScene");
+                return;
+            }
             GameManager.Instance.LoadEnd("FinalStoryScene");
             return;
         }
-        Debug.Log("Proximo Boss");
         bosses[index].SetActive(true);
         index++;
     }

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27e57f773fdc474fb2fdb1282b21b00, type: 3}
+  m_Name: Dialog 06
+  m_EditorClassIdentifier: 
+  listCharacterNames:
+  - Dourado
+  - Kon
+  - Dourado
+  - Nyantonio
+  - Kon
+  - Nyantonio
+  - Dourado
+  listDialogTexts:
+  - Ah, the plants are growing...
+  - Oh, are you all right, old man? You look sadder than the common Nyantonio...
+  - Leave Nyantonio alone, Kon... Maybe he's not having a good day... Let's get back
+    to work!
+  - Actually, today is the birthday of one of my sons... Unfortunately I can't see
+    him anymore.
+  - What happene...
+  - He is a ghost, who roams the forest at night. Sometimes I can feel as if he were
+    close, here by my side... But I never managed to see him.
+  - ...well, we have to get back to work... See you Nyantonio
+  listCharacterImgs:
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}

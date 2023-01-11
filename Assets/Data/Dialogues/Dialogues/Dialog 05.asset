@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27e57f773fdc474fb2fdb1282b21b00, type: 3}
+  m_Name: Dialog 05
+  m_EditorClassIdentifier: 
+  listCharacterNames:
+  - Dourado
+  - Kon
+  - Nyantonio
+  - Dourado
+  - Kon
+  listDialogTexts:
+  - I feel like we're starting to get strong Mr Nyantonio! We're getting seeds and
+    harvesting a lot of ammo... food.
+  - Yes really. It seems that being a farmer is not so bad after all... I just want
+    to leave this cat form.
+  - Great! You two are doing a good job! Continue to locate and plant more seeds.
+    There are many places in this forest to be explored!
+  - You see feline... we are doing well! Let's keep going, just a little bit more
+    and we'll be ready!
+  - It's Kon...
+  listCharacterImgs:
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}
+  - {fileID: 21300000, guid: 5f7913fde1beccb4ebb80b22718166bc, type: 3}
+  - {fileID: 21300000, guid: 02925555dfa01624d97d1195f2604d5c, type: 3}
+  - {fileID: 21300000, guid: 473b310fd7bcca640b985faa2b0f071b, type: 3}

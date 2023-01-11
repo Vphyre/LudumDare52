@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MENU : MonoBehaviour
 {
     public Toggle toggle;
+    public Toggle dialogToggle;
     private void Start()
     {
         if (PlayerPrefs.GetInt("Tutorial") > 0)
@@ -18,6 +19,7 @@ public class MENU : MonoBehaviour
         {
             toggle.isOn = true;
         }
+        PlayerPrefs.SetInt("NoDialog", 0);
     }
     public void Quit()
     {
@@ -26,6 +28,11 @@ public class MENU : MonoBehaviour
 
     public void StartGame(string sceneName)
     {
+        if(PlayerPrefs.GetInt("NoDialog") > 0)
+        {
+            SceneManager.LoadScene("Gameplay");
+            return;
+        }
         SceneManager.LoadScene(sceneName);
     }
     public void ActiveTutorial()
@@ -33,12 +40,21 @@ public class MENU : MonoBehaviour
         if (toggle.isOn)
         {
             PlayerPrefs.SetInt("Tutorial", 0);
-            Debug.Log("Sem Tutorial");
         }
         else
         {
             PlayerPrefs.SetInt("Tutorial", 1);
-            Debug.Log("Com Tutorial");
+        }
+    }
+    public void ActiveDialogs()
+    {
+        if (dialogToggle.isOn)
+        {
+            PlayerPrefs.SetInt("NoDialog", 0);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("NoDialog", 1);
         }
     }
 

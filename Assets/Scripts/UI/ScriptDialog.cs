@@ -30,6 +30,12 @@ public class ScriptDialog : MonoBehaviour
 
     void OnEnable()
     {
+        if (PlayerPrefs.GetInt("NoDialog") > 0)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+        GameManager.Instance.dialogTrigger = true;
         Time.timeScale = 0f;
         UpdateScreenInfo();
     }
@@ -45,7 +51,13 @@ public class ScriptDialog : MonoBehaviour
         else
         {
             this.gameObject.SetActive(false);
+            GameManager.Instance.dialogTrigger = false;
             Time.timeScale = 1f;
         }
+    }
+    private void OnDisable()
+    {
+        GameManager.Instance.dialogTrigger = false;
+        Time.timeScale = 1f;
     }
 }
