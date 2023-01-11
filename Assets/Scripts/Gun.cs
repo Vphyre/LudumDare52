@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Gun : MonoBehaviour
 {
@@ -20,7 +18,7 @@ public class Gun : MonoBehaviour
         Mira();
         if (Time.time > time)
         {
-            if (Input.GetMouseButtonDown(0) && InventorySystem.Instance.selectedBullet)
+            if (Input.GetMouseButtonDown(0) && InventorySystem.Instance.selectedBullet && !EventSystem.current.IsPointerOverGameObject())
             {
                 timebts = InventorySystem.Instance.selectedBullet.fireRate;
                 GameObject bullet = pool.GetPooledObject();
@@ -34,12 +32,18 @@ public class Gun : MonoBehaviour
         }
     }
 
+    public Vector3 GetMouseWorldPosition() {
+        Vector3 vec = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        vec.z = 0f;
+        return vec;
+    }
+
     private void Mira()
     {
-        //rota��o
-        Vector3 dig = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float angle = Mathf.Atan2(dig.y, dig.x)* Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f,0f,angle);
+        Vector3 mousePosition = GetMouseWorldPosition();
+        Vector3 aimDirection = (mousePosition - player.position).normalized;
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+        transform.eulerAngles = new Vector3(0, 0, angle);
 
         //posi��o
         Vector3 playermo = Camera.main.ScreenToWorldPoint(Input.mousePosition)- player.position;
