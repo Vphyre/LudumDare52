@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98bf3eb2b824c644d902e783ab9ec3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootForce: 9
+  ShootForce: 12
   BulletDestroyTime: 4
 --- !u!50 &1522845152516738156
 Rigidbody2D:

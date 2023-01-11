@@ -33,10 +33,14 @@ public class BossBullet : MonoBehaviour
         {
             col.gameObject.GetComponent<Player>().life -= Random.Range(5, 15);
             Destroy(gameObject);
+            return;
         }
         if (col.gameObject.CompareTag("bullet"))
         {
+            col.gameObject.SetActive(false);
             Destroy(gameObject);
+            return;
         }
+        Destroy(gameObject);
     }
 }

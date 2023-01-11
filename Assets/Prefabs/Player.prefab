@@ -124,6 +124,7 @@ MonoBehaviour:
   GunPoint: {fileID: 3118108320620494200}
   projetil: {fileID: 4966033969195170356, guid: 94ea021c8bbfe6447b7e54099f38d097, type: 3}
   timebts: 0.2
+  pool: {fileID: 0}
 --- !u!1 &8089467636810780388
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ GameObject:
   - component: {fileID: 3915745762666069920}
   - component: {fileID: 368007020}
   - component: {fileID: 368007021}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -254,6 +255,7 @@ MonoBehaviour:
   MaxDamage2: 0
   MinDamage3: 0
   MaxDamage3: 0
+  statusUI: {fileID: 0}
 --- !u!50 &368007020
 Rigidbody2D:
   serializedVersion: 4
