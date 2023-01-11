@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 
 public class UIManager : Singleton<UIManager>
@@ -37,6 +38,8 @@ public class UIManager : Singleton<UIManager>
     public TextMeshProUGUI timeCounter;
     public float timeLeft = 0f;
     public bool isDay = true;
+    private int selectWeaponIndex = 0;
+    public List<string> weaponsAvaliable;
 
     protected override void Awake()
     {
@@ -47,6 +50,7 @@ public class UIManager : Singleton<UIManager>
     private void Start()
     {
         timeLeft = DayNightSystem.Instance.dayTime;
+        UpdateAvaliableWeapons();
     }
 
     private void Update()
@@ -67,6 +71,13 @@ public class UIManager : Singleton<UIManager>
                 timeCounter.text = "Time to day: " + (Mathf.Ceil(timeLeft)).ToString();
             }
         }
+        
+        if (weaponsAvaliable.Count == 0)
+        {
+            return;
+        }
+        SelectWeaponByNumber();
+        SelectWeaponByMouseWheel();
     }
 
     public void UpdateSeedUI()
@@ -203,6 +214,7 @@ public class UIManager : Singleton<UIManager>
         {
             greenBananaWeapon.interactable = true;
         }
+        UpdateAvaliableWeapons();
     }
 
     public void SelectWeapon(string bulletName)
@@ -214,6 +226,7 @@ public class UIManager : Singleton<UIManager>
                 {
                     activeCornWeapon.SetActive(false);
                     actualSelectedWeapon = "";
+                    // selectWeaponIndex = 0;
                 }
                 else
                 {
@@ -223,6 +236,7 @@ public class UIManager : Singleton<UIManager>
                     activeGreenBananaWeapon.SetActive(false);
                     activeYellowBananaWeapon.SetActive(false);
                     actualSelectedWeapon = "corn";
+                    selectWeaponIndex = 1;
                 }
                 break;
             case "carrot":
@@ -230,6 +244,7 @@ public class UIManager : Singleton<UIManager>
                 {
                     activeCarrotWeapon.SetActive(false);
                     actualSelectedWeapon = "";
+                    // selectWeaponIndex = 0;
                 }
                 else
                 {
@@ -239,6 +254,7 @@ public class UIManager : Singleton<UIManager>
                     activeGreenBananaWeapon.SetActive(false);
                     activeYellowBananaWeapon.SetActive(false);
                     actualSelectedWeapon = "carrot";
+                    selectWeaponIndex = 2;
                 }
                 break;
             case "potato":
@@ -246,6 +262,7 @@ public class UIManager : Singleton<UIManager>
                 {
                     activePotatoWeapon.SetActive(false);
                     actualSelectedWeapon = "";
+                    // selectWeaponIndex = 0;
                 }
                 else
                 {
@@ -255,6 +272,7 @@ public class UIManager : Singleton<UIManager>
                     activeGreenBananaWeapon.SetActive(false);
                     activeYellowBananaWeapon.SetActive(false);
                     actualSelectedWeapon = "potato";
+                    selectWeaponIndex = 3;
                 }
                 break;
             case "greenBanana":
@@ -262,6 +280,7 @@ public class UIManager : Singleton<UIManager>
                 {
                     activeGreenBananaWeapon.SetActive(false);
                     actualSelectedWeapon = "";
+                    // selectWeaponIndex = 0;
                 }
                 else
                 {
@@ -271,6 +290,7 @@ public class UIManager : Singleton<UIManager>
                     activeGreenBananaWeapon.SetActive(true);
                     activeYellowBananaWeapon.SetActive(false);
                     actualSelectedWeapon = "greenBanana";
+                    selectWeaponIndex = 4;
                 }
                 break;
             case "yellowBanana":
@@ -278,6 +298,7 @@ public class UIManager : Singleton<UIManager>
                 {
                     activeYellowBananaWeapon.SetActive(false);
                     actualSelectedWeapon = "";
+                    // selectWeaponIndex = 0;
                 }
                 else
                 {
@@ -287,6 +308,7 @@ public class UIManager : Singleton<UIManager>
                     activeGreenBananaWeapon.SetActive(false);
                     activeYellowBananaWeapon.SetActive(true);
                     actualSelectedWeapon = "yellowBanana";
+                    selectWeaponIndex = 5;
                 }
                 break;
         }
@@ -305,5 +327,128 @@ public class UIManager : Singleton<UIManager>
     {
         isDay = false;
         timeLeft = DayNightSystem.Instance.nightTime;
+    }
+    public void SelectWeaponByNumber()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1) && weaponsAvaliable.Count > 0)
+        {
+            selectWeaponIndex = 0;
+            SelectWeaponByIndex();
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2) && weaponsAvaliable.Count > 1)
+        {
+            selectWeaponIndex = 1;
+            SelectWeaponByIndex();
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3) && weaponsAvaliable.Count > 2)
+        {
+            selectWeaponIndex = 2;
+            SelectWeaponByIndex();
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4) && weaponsAvaliable.Count > 3)
+        {
+            selectWeaponIndex = 3;
+            SelectWeaponByIndex();
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5) && weaponsAvaliable.Count > 4)
+        {
+            selectWeaponIndex = 4;
+            SelectWeaponByIndex();
+            return;
+        }
+    }
+    public void SelectWeaponByMouseWheel()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            ChangeIndex(1);
+            SelectWeaponByIndex();
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            ChangeIndex(-1);
+            SelectWeaponByIndex();
+        }
+
+    }
+    private void ChangeIndex(int change)
+    {
+        selectWeaponIndex += change;
+        if (selectWeaponIndex > weaponsAvaliable.Count - 1)
+        {
+            selectWeaponIndex = 0;
+            return;
+        }
+        if (selectWeaponIndex < 0)
+        {
+            selectWeaponIndex = weaponsAvaliable.Count - 1;
+            return;
+        }
+    }
+    private void SelectWeaponByIndex()
+    {
+        SelectWeapon(weaponsAvaliable[selectWeaponIndex]);
+        // if (selectWeaponIndex == 1 && InventorySystem.Instance.cornBullets > 0)
+        // {
+        //     SelectWeapon("corn");
+        //     return;
+        // }
+
+        // if (selectWeaponIndex == 2 && InventorySystem.Instance.carrotBullets > 0)
+        // {
+        //     SelectWeapon("carrot");
+        //     return;
+        // }
+
+        // if (selectWeaponIndex == 3 && InventorySystem.Instance.potatoBullets > 0)
+        // {
+        //     SelectWeapon("potato");
+        //     return;
+        // }
+
+        // if (selectWeaponIndex == 4 && InventorySystem.Instance.hasGreenBanana)
+        // {
+        //     SelectWeapon("greenBanana");
+        //     return;
+        // }
+
+        // if (selectWeaponIndex == 5 && InventorySystem.Instance.hasGoldenBanana)
+        // {
+        //     SelectWeapon("yellowBanana");
+        //     return;
+        // }
+    }
+    public void UpdateAvaliableWeapons()
+    {
+        weaponsAvaliable = new List<string>();
+
+        if (InventorySystem.Instance.cornBullets > 0)
+        {
+            weaponsAvaliable.Add("corn");
+        }
+
+        if (InventorySystem.Instance.carrotBullets > 0)
+        {
+            weaponsAvaliable.Add("carrot");
+        }
+
+        if (InventorySystem.Instance.potatoBullets > 0)
+        {
+            weaponsAvaliable.Add("potato");
+        }
+
+        if (InventorySystem.Instance.hasGreenBanana)
+        {
+            weaponsAvaliable.Add("greenBanana");
+        }
+
+        if (InventorySystem.Instance.hasGoldenBanana)
+        {
+            weaponsAvaliable.Add("yellowBanana");
+        }
     }
 }
