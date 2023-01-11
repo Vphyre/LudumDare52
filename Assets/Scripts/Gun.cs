@@ -14,11 +14,17 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        bool canShoot = true;
+        if (hit) {
+            if (hit.collider.tag == "Plot") {
+                canShoot = false;
+            }
+        }
         Mira();
         if (Time.time > time)
         {
-            if (Input.GetMouseButtonDown(0) && InventorySystem.Instance.selectedBullet && !EventSystem.current.IsPointerOverGameObject())
+            if (Input.GetMouseButtonDown(0) && InventorySystem.Instance.selectedBullet && !EventSystem.current.IsPointerOverGameObject() && canShoot)
             {
                 timebts = InventorySystem.Instance.selectedBullet.fireRate;
                 GameObject bullet = pool.GetPooledObject();
