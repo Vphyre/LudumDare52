@@ -11,10 +11,12 @@ public class BossDamage : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private Color defaultColor;
     private WaitForSeconds blinkTime = new WaitForSeconds(0.1f);
+    private AudioSource audioSource;
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         bossManager = FindObjectOfType<BossManager>();   
+        audioSource = GetComponent<AudioSource>();
         defaultColor = spriteRenderer.color;
     }
 
@@ -45,6 +47,9 @@ public class BossDamage : MonoBehaviour
         life -= dam;
         takeDamage = true;
         damageTimer = 1f;
+        if (audioSource) {
+            audioSource.Play();
+        }
         StartCoroutine("damageFeedback");
         if (life <= 0)
         {
