@@ -176,7 +176,9 @@ public class UIManager : Singleton<UIManager>
         {
             cornWeapon.interactable = false;
             activeCornWeapon.SetActive(false);
-            actualSelectedWeapon = "";
+            if (actualSelectedWeapon == "corn") {
+                actualSelectedWeapon = "";
+            }
         }
         else
         {
@@ -186,7 +188,9 @@ public class UIManager : Singleton<UIManager>
         {
             carrotWeapon.interactable = false;
             activeCarrotWeapon.SetActive(false);
-            actualSelectedWeapon = "";
+            if (actualSelectedWeapon == "carrot") {
+                actualSelectedWeapon = "";
+            }
         }
         else
         {
@@ -196,7 +200,9 @@ public class UIManager : Singleton<UIManager>
         {
             potatoWeapon.interactable = false;
             activePotatoWeapon.SetActive(false);
-            actualSelectedWeapon = "";
+            if (actualSelectedWeapon == "potato") {
+                actualSelectedWeapon = "";
+            }
         }
         else
         {
@@ -205,8 +211,6 @@ public class UIManager : Singleton<UIManager>
         if (InventorySystem.Instance.hasGoldenBanana == false)
         {
             yellowBananWeapon.interactable = false;
-            activeYellowBananaWeapon.SetActive(false);
-            actualSelectedWeapon = "";
         }
         else
         {
@@ -215,8 +219,6 @@ public class UIManager : Singleton<UIManager>
         if (InventorySystem.Instance.hasGreenBanana == false)
         {
             greenBananaWeapon.interactable = false;
-            activeGreenBananaWeapon.SetActive(false);
-            actualSelectedWeapon = "";
         }
         else
         {
@@ -287,6 +289,7 @@ public class UIManager : Singleton<UIManager>
                 if (actualSelectedWeapon == "greenBanana")
                 {
                     activeGreenBananaWeapon.SetActive(false);
+                    actualSelectedWeapon = "";
                     // selectWeaponIndex = 0;
                 }
                 else
@@ -304,6 +307,7 @@ public class UIManager : Singleton<UIManager>
                 if (actualSelectedWeapon == "yellowBanana")
                 {
                     activeYellowBananaWeapon.SetActive(false);
+                    actualSelectedWeapon = "";
                     // selectWeaponIndex = 0;
                 }
                 else
