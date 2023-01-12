@@ -10,7 +10,7 @@ public class SkipToBoss : MonoBehaviour
     public int clickButtonCount = 0;
     private void OnEnable()
     {
-        if(GameManager.Instance.dayCount == daysToShowButton && clickButtonCount != 1 && GameManager.Instance.inBoss == false)
+        if(GameManager.Instance.dayCount >= daysToShowButton && clickButtonCount != 1 && GameManager.Instance.inBoss == false)
         {
             bossButton.interactable = true;
         }
