@@ -9,13 +9,15 @@ public class CollectableItem : MonoBehaviour
     public AudioSource audioSource;
     private float clipLength;
 
-    private void Start() {
+    private void Start()
+    {
         audioSource = GetComponent<AudioSource>();
         clipLength = audioSource.clip.length;
     }
-
-    private void OnCollisionEnter2D(Collision2D other) {
-        if (other.transform.CompareTag("Player") && interactable) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.transform.CompareTag("Player") && interactable)
+        {
             InventorySystem.Instance.AddSeed(seed);
             interactable = false;
             audioSource.Play();
@@ -25,18 +27,25 @@ public class CollectableItem : MonoBehaviour
         }
     }
 
-    private void OnDestroy() {
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+
+    }
+
+    private void OnDestroy()
+    {
         StopAllCoroutines();
     }
 
-    IEnumerator PlayCollectAudio () {
+    IEnumerator PlayCollectAudio()
+    {
         yield return new WaitForSeconds(clipLength);
         DisableItem();
     }
 
     public void DisableItem()
     {
-        if(initialItem)
+        if (initialItem)
         {
             Destroy(gameObject);
         }

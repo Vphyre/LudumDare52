@@ -5,15 +5,19 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public List<GameObject> dialogs;
+    public GameObject exclamationPoint;
     private Collider2D dialogCollider;
     void Start()
     {
         if (PlayerPrefs.GetInt("NoDialog") > 0)
         {
+            exclamationPoint.SetActive(false);
             gameObject.SetActive(false);
             return;
         }
         dialogCollider = GetComponent<Collider2D>();
+        // TurnOffCollider();
+        // Invoke("TurnOnCollider", 0.1F);
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -65,12 +69,19 @@ public class DialogTrigger : MonoBehaviour
             TurnOffCollider();
         }
     }
+    private void OnMouseDown()
+    {
+        GetDialog();
+    }
     public void TurnOnCollider()
     {
+        TurnOffCollider();
+        exclamationPoint.SetActive(true);
         dialogCollider.enabled = true;
     }
     public void TurnOffCollider()
     {
+        exclamationPoint.SetActive(false);
         dialogCollider.enabled = false;
     }
 }

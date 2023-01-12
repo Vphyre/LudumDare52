@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TutorialScript : MonoBehaviour
 {
-    private void Start()
+    public GameObject npcDialog;
+    private void Awake()
     {
         if (PlayerPrefs.GetInt("Tutorial") > 0)
         {
@@ -19,6 +20,14 @@ public class TutorialScript : MonoBehaviour
     public void Close()
     {
         Time.timeScale = 1f;
+        if (PlayerPrefs.GetInt("NoDialog") > 0)
+        {
+            npcDialog.SetActive(false);
+        }
+        else
+        {
+            npcDialog.SetActive(true);
+        }
         this.gameObject.SetActive(false);
     }
 }
