@@ -7,6 +7,7 @@ public class ScriptDialog : MonoBehaviour
 {
     [SerializeField] private Canvas canvas;
     public DialogData dialogData;
+    public AudioSource audioSource;
 
     public Text characterName;
     public Text dialogText;
@@ -25,6 +26,10 @@ public class ScriptDialog : MonoBehaviour
             characterName.text = dialogData.listCharacterNames[curIndexDialog];
             dialogText.text = dialogData.listDialogTexts[curIndexDialog];
             characterImg.sprite = dialogData.listCharacterImgs[curIndexDialog];
+            if (audioSource) {
+                audioSource.clip = dialogData.voiceToPlay[curIndexDialog];
+                audioSource.Play();
+            }
         }
     }
 

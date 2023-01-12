@@ -15,6 +15,9 @@ public class GameManager : Singleton<GameManager>
     public int daysToShowBoss;
     public bool inBoss = false;
     public bool dialogTrigger;
+    public AudioSource audioSource;
+    public AudioClip morningSFX;
+    public AudioClip nightSFX;
 
     protected override void Awake()
     {
@@ -23,10 +26,16 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 0f;
     }
 
+    private void Start() {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void DayCicle()
     {
         dayCount++;
         sun.color = new Color32(255, 255, 255, 255);
+        audioSource.clip = morningSFX;
+        audioSource.Play();
     }
 
     public void NightCicle()
@@ -36,6 +45,8 @@ public class GameManager : Singleton<GameManager>
         // Stop day night cicle on the boss battle
         sun.color = new Color32(11, 12, 154, 255);
         VerifyBoss();
+        audioSource.clip = nightSFX;
+        audioSource.Play();
     }
     public void VerifyBoss()
     {

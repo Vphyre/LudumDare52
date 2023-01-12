@@ -10,6 +10,11 @@ public class Gun : MonoBehaviour
     private float time =0;
     [SerializeField] private float timebts;
     public ObjectPool pool;
+    public AudioSource audioSource;
+
+    private void Start() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -33,6 +38,7 @@ public class Gun : MonoBehaviour
                 bullet.gameObject.SetActive(true);
                 InventorySystem.Instance.UseBullet();
                 time = Time.time + timebts;
+                audioSource.Play();
             }
             
         }

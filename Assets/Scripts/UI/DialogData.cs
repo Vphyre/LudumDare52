@@ -8,4 +8,5 @@ public class DialogData : ScriptableObject
     public List<string> listCharacterNames = new List<string>();
     public List<string> listDialogTexts = new List<string>();
     public List<Sprite> listCharacterImgs = new List<Sprite>();
+    public List<AudioClip> voiceToPlay = new List<AudioClip>();
 }

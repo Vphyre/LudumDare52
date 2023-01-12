@@ -5,6 +5,13 @@ public class PlantingPlot : MonoBehaviour
     public int daysPassed = 0;
     public Seed actualSeed;
     public SpriteRenderer plantedSeedSprite;
+    public AudioSource audioSource;
+    public AudioClip digClip;
+    public AudioClip collectClip;
+
+    private void Start() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void DayCicle() {
         if (!actualSeed) {
@@ -25,12 +32,16 @@ public class PlantingPlot : MonoBehaviour
                     Debug.Log("No seed selected");
                     return;
                 }
+                audioSource.clip = digClip;
+                audioSource.Play();
                 plantedSeedSprite.sprite = seed.defaultSprite;
                 actualSeed = seed;
                 daysPassed = 0;
             }
             else if (actualSeed) {
                 if (daysPassed == actualSeed.daysToGrow) {
+                    audioSource.clip = collectClip;
+                    audioSource.Play();
                     Debug.Log("Harvested");
                     InventorySystem.Instance.AddBullets(actualSeed);
                     plantedSeedSprite.sprite = null;
