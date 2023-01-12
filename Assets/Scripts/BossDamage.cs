@@ -1,14 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class BossDamage : MonoBehaviour
 {
     public int life;
     private BossManager bossManager;
+
+    public bool takeDamage = false;
+    public float damageTimer = 1f;
+    public SpriteRenderer spriteRenderer;
+    private Color defaultColor;
+    private WaitForSeconds blinkTime = new WaitForSeconds(0.1f);
     private void Start()
     {
-        bossManager = FindObjectOfType<BossManager>();    
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        bossManager = FindObjectOfType<BossManager>();   
+        defaultColor = spriteRenderer.color;
+    }
+
+    private void Update() {
+        if (takeDamage) {
+            damageTimer -= Time.deltaTime;
+        }
+        if (damageTimer <= 0) {
+            takeDamage = false;
+            StopAllCoroutines();
+            spriteRenderer.color = defaultColor;
+        }
+    }
+
+    private void OnDisable() {
+        StopAllCoroutines();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -21,10 +43,22 @@ public class BossDamage : MonoBehaviour
     private void Damage(int dam)
     {
         life -= dam;
+        takeDamage = true;
+        damageTimer = 1f;
+        StartCoroutine("damageFeedback");
         if (life <= 0)
         {
             bossManager.NextBoss();
             this.gameObject.SetActive(false);
         }
     }
+  private IEnumerator damageFeedback() {
+    while(takeDamage) {
+        spriteRenderer.color = Color.red;
+        yield return blinkTime;
+        spriteRenderer.color = defaultColor;
+        yield return blinkTime;
+     }
+  }
+
 }

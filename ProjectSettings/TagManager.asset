@@ -15,6 +15,7 @@ TagManager:
   - RIGHT
   - LifeText
   - Fire
+  - Plot
   layers:
   - Default
   - TransparentFX
