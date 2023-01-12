@@ -8,6 +8,7 @@ public class PlantingPlot : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip digClip;
     public AudioClip collectClip;
+    public ParticleSystem particles;
 
     private void Start() {
         audioSource = GetComponent<AudioSource>();
@@ -42,6 +43,7 @@ public class PlantingPlot : MonoBehaviour
                 if (daysPassed == actualSeed.daysToGrow) {
                     audioSource.clip = collectClip;
                     audioSource.Play();
+                    particles.Play();
                     Debug.Log("Harvested");
                     InventorySystem.Instance.AddBullets(actualSeed);
                     plantedSeedSprite.sprite = null;
