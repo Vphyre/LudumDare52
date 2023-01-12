@@ -71,7 +71,7 @@ public class UIManager : Singleton<UIManager>
                 timeCounter.text = "Time to day: " + (Mathf.Ceil(timeLeft)).ToString();
             }
         }
-        
+
         if (weaponsAvaliable.Count == 0)
         {
             return;
@@ -89,6 +89,7 @@ public class UIManager : Singleton<UIManager>
         {
             cornSeed.interactable = false;
             activeCorn.SetActive(false);
+            actualSelectedSeed = "";
         }
         else
         {
@@ -98,6 +99,7 @@ public class UIManager : Singleton<UIManager>
         {
             carrotSeed.interactable = false;
             activeCarrot.SetActive(false);
+            actualSelectedSeed = "";
         }
         else
         {
@@ -107,6 +109,7 @@ public class UIManager : Singleton<UIManager>
         {
             potatoSeed.interactable = false;
             activePotato.SetActive(false);
+            actualSelectedSeed = "";
         }
         else
         {
@@ -173,6 +176,7 @@ public class UIManager : Singleton<UIManager>
         {
             cornWeapon.interactable = false;
             activeCornWeapon.SetActive(false);
+            actualSelectedWeapon = "";
         }
         else
         {
@@ -182,6 +186,7 @@ public class UIManager : Singleton<UIManager>
         {
             carrotWeapon.interactable = false;
             activeCarrotWeapon.SetActive(false);
+            actualSelectedWeapon = "";
         }
         else
         {
@@ -191,6 +196,7 @@ public class UIManager : Singleton<UIManager>
         {
             potatoWeapon.interactable = false;
             activePotatoWeapon.SetActive(false);
+            actualSelectedWeapon = "";
         }
         else
         {
@@ -200,6 +206,7 @@ public class UIManager : Singleton<UIManager>
         {
             yellowBananWeapon.interactable = false;
             activeYellowBananaWeapon.SetActive(false);
+            actualSelectedWeapon = "";
         }
         else
         {
@@ -209,6 +216,7 @@ public class UIManager : Singleton<UIManager>
         {
             greenBananaWeapon.interactable = false;
             activeGreenBananaWeapon.SetActive(false);
+            actualSelectedWeapon = "";
         }
         else
         {
@@ -279,7 +287,6 @@ public class UIManager : Singleton<UIManager>
                 if (actualSelectedWeapon == "greenBanana")
                 {
                     activeGreenBananaWeapon.SetActive(false);
-                    actualSelectedWeapon = "";
                     // selectWeaponIndex = 0;
                 }
                 else
@@ -297,7 +304,6 @@ public class UIManager : Singleton<UIManager>
                 if (actualSelectedWeapon == "yellowBanana")
                 {
                     activeYellowBananaWeapon.SetActive(false);
-                    actualSelectedWeapon = "";
                     // selectWeaponIndex = 0;
                 }
                 else
