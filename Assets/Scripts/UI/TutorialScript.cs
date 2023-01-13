@@ -9,12 +9,19 @@ public class TutorialScript : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Tutorial") > 0)
         {
+            MusicSystem.Instance.musicController.SetDayMusic();
+            Time.timeScale = 1f;
             Close();
+            // MusicSystem.Instance.PauseMusic();
         }
         else
         {
+            Time.timeScale = 0f;
+            GameManager.Instance.dialogTrigger = true;
             this.gameObject.SetActive(true);
             PlayerPrefs.SetInt("Tutorial", 1);
+            MusicSystem.Instance.musicController.SetDayMusic();
+            MusicSystem.Instance.PauseMusic();
         }
     }
     public void Close()
@@ -22,12 +29,15 @@ public class TutorialScript : MonoBehaviour
         Time.timeScale = 1f;
         if (PlayerPrefs.GetInt("NoDialog") > 0)
         {
+            GameManager.Instance.dialogTrigger = false;
             npcDialog.SetActive(false);
+            Time.timeScale = 1f;
         }
         else
         {
             npcDialog.SetActive(true);
         }
+        MusicSystem.Instance.StartMusic();
         this.gameObject.SetActive(false);
     }
 }

@@ -12,6 +12,8 @@ public class GameOver : MonoBehaviour
     {
         obj.SetActive(true);
         Time.timeScale = 0f;
+        MusicSystem.Instance.StopOtherMusic();
+        MusicSystem.Instance.PlayeOtherMusic("Path");
     }
     public void reload()
     {

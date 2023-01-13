@@ -18,7 +18,6 @@ public class ScriptDialog : MonoBehaviour
     {
         canvas.worldCamera = Camera.main;
     }
-
     private void UpdateScreenInfo()
     {
         if (dialogData.listDialogTexts.Count > 0)
@@ -26,7 +25,8 @@ public class ScriptDialog : MonoBehaviour
             characterName.text = dialogData.listCharacterNames[curIndexDialog];
             dialogText.text = dialogData.listDialogTexts[curIndexDialog];
             characterImg.sprite = dialogData.listCharacterImgs[curIndexDialog];
-            if (audioSource) {
+            if (audioSource)
+            {
                 audioSource.clip = dialogData.voiceToPlay[curIndexDialog];
                 audioSource.Play();
             }
@@ -43,6 +43,8 @@ public class ScriptDialog : MonoBehaviour
         GameManager.Instance.dialogTrigger = true;
         Time.timeScale = 0f;
         UpdateScreenInfo();
+        MusicSystem.Instance.StopOtherMusic();
+        MusicSystem.Instance.PlayeOtherMusic("NPC");
     }
 
     public void Next()
@@ -64,5 +66,20 @@ public class ScriptDialog : MonoBehaviour
     {
         GameManager.Instance.dialogTrigger = false;
         Time.timeScale = 1f;
+        if (MusicSystem.Instance.musicController.bossSongTrigger)
+        {
+            MusicSystem.Instance.StopOtherMusic();
+            MusicSystem.Instance.PlayeOtherMusic("Boss");
+            return;
+        }
+        if (MusicSystem.Instance.musicController.pathBossSongTrigger)
+        {
+            MusicSystem.Instance.StopOtherMusic();
+            MusicSystem.Instance.PlayeOtherMusic("Path");
+            return;
+        }
+        MusicSystem.Instance.StartMusic();
+        MusicSystem.Instance.StopOtherMusic();
+
     }
 }

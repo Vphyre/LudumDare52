@@ -23,7 +23,7 @@ public class GameManager : Singleton<GameManager>
     {
         IsPersistentBetweenScenes = false;
         base.Awake();
-        Time.timeScale = 0f;
+        // Time.timeScale = 0f;
     }
 
     private void Start() {
@@ -62,6 +62,8 @@ public class GameManager : Singleton<GameManager>
     public void ShowBoss()
     {
         candleObject.SetActive(true);
+        MusicSystem.Instance.musicController.pathBossSongTrigger = true;
+        MusicSystem.Instance.PlayeOtherMusic("Path");
         player.transform.position = teleportPosition.position;
         inBoss = true;
     }

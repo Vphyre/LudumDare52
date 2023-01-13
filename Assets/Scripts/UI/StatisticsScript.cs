@@ -17,6 +17,32 @@ public class StatisticsScript : MonoBehaviour
         HideElements();
         NPCs();
     }
+    private void OnEnable()
+    {
+        MusicSystem.Instance.StopOtherMusic();
+        MusicSystem.Instance.PlayeOtherMusic("Pause Menu");
+    }
+    private void OnDisable()
+    {
+        if(MusicSystem.Instance == null)
+        {
+            return;
+        }
+        if (MusicSystem.Instance.musicController.bossSongTrigger)
+        {
+            MusicSystem.Instance.StopOtherMusic();
+            MusicSystem.Instance.PlayeOtherMusic("Boss");
+            return;
+        }
+        if (MusicSystem.Instance.musicController.pathBossSongTrigger)
+        {
+            MusicSystem.Instance.StopOtherMusic();
+            MusicSystem.Instance.PlayeOtherMusic("Path");
+            return;
+        }
+        MusicSystem.Instance.StartMusic();
+        MusicSystem.Instance.StopOtherMusic();
+    }
 
     private void HideElements()
     {

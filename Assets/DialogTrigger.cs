@@ -65,7 +65,7 @@ public class DialogTrigger : MonoBehaviour
         }
         if (GameManager.Instance.dayCount == 7)
         {
-            dialogs[6].SetActive(true);;
+            dialogs[6].SetActive(true); ;
             TurnOffCollider();
         }
     }

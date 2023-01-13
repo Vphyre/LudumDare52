@@ -14,6 +14,10 @@ public class CandleLock : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            MusicSystem.Instance.musicController.pathBossSongTrigger = false;
+            MusicSystem.Instance.musicController.bossSongTrigger = true;
+            MusicSystem.Instance.StopOtherMusic();
+            MusicSystem.Instance.PlayeOtherMusic("Boss");
             lockObject.SetActive(true);
             this.gameObject.SetActive(false);
             bossManager.FirstBoss();
