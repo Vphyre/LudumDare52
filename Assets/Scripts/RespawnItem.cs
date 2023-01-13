@@ -10,6 +10,7 @@ public class RespawnItem : MonoBehaviour
         {
             GetComponent<BoxCollider2D>().enabled = true;
             GetComponent<SpriteRenderer>().enabled = true;
+            GetComponent<CollectableItem>().interactable = true;
         }
     }
 }

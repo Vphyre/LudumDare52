@@ -21,6 +21,7 @@ public class StatisticsScript : MonoBehaviour
     {
         MusicSystem.Instance.StopOtherMusic();
         MusicSystem.Instance.PlayeOtherMusic("Pause Menu");
+        GameManager.Instance.pauseGameAmount++;
     }
     private void OnDisable()
     {

@@ -402,35 +402,6 @@ public class UIManager : Singleton<UIManager>
     private void SelectWeaponByIndex()
     {
         SelectWeapon(weaponsAvaliable[selectWeaponIndex]);
-        // if (selectWeaponIndex == 1 && InventorySystem.Instance.cornBullets > 0)
-        // {
-        //     SelectWeapon("corn");
-        //     return;
-        // }
-
-        // if (selectWeaponIndex == 2 && InventorySystem.Instance.carrotBullets > 0)
-        // {
-        //     SelectWeapon("carrot");
-        //     return;
-        // }
-
-        // if (selectWeaponIndex == 3 && InventorySystem.Instance.potatoBullets > 0)
-        // {
-        //     SelectWeapon("potato");
-        //     return;
-        // }
-
-        // if (selectWeaponIndex == 4 && InventorySystem.Instance.hasGreenBanana)
-        // {
-        //     SelectWeapon("greenBanana");
-        //     return;
-        // }
-
-        // if (selectWeaponIndex == 5 && InventorySystem.Instance.hasGoldenBanana)
-        // {
-        //     SelectWeapon("yellowBanana");
-        //     return;
-        // }
     }
     public void UpdateAvaliableWeapons()
     {

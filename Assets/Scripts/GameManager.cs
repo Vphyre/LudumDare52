@@ -18,6 +18,7 @@ public class GameManager : Singleton<GameManager>
     public AudioSource audioSource;
     public AudioClip morningSFX;
     public AudioClip nightSFX;
+    public int pauseGameAmount = 0;
 
     protected override void Awake()
     {

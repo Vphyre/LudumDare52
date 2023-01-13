@@ -15,6 +15,7 @@ public class InventorySystem : Singleton<InventorySystem>
     public int carrotBullets = 0;
     public int potatoBullets = 0;
     public int cornBullets = 0;
+    public int plantAmount = 0;
     public BulletType selectedBullet = null;
     public BulletType cornBullet;
     public BulletType carrotBullet;
@@ -194,6 +195,7 @@ public class InventorySystem : Singleton<InventorySystem>
         {
             case "potato":
                 potatoSeedQtd--;
+                plantAmount++;
                 if (potatoSeedQtd == 0)
                 {
                     selectedSeed = null;
@@ -201,6 +203,7 @@ public class InventorySystem : Singleton<InventorySystem>
                 break;
             case "corn":
                 cornSeedQtd--;
+                plantAmount++;
                 if (cornSeedQtd == 0)
                 {
                     selectedSeed = null;
@@ -208,6 +211,7 @@ public class InventorySystem : Singleton<InventorySystem>
                 break;
             case "carrot":
                 carrotSeedQtd--;
+                plantAmount++;
                 if (carrotSeedQtd == 0)
                 {
                     selectedSeed = null;
