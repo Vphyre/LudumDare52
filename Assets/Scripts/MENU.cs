@@ -8,6 +8,7 @@ public class MENU : MonoBehaviour
 {
     public Toggle toggle;
     public Toggle dialogToggle;
+    public Toggle tipsToggle;
     private void Start()
     {
         if (PlayerPrefs.GetInt("Tutorial") > 0)
@@ -20,6 +21,7 @@ public class MENU : MonoBehaviour
             toggle.isOn = true;
         }
         PlayerPrefs.SetInt("NoDialog", 0);
+        PlayerPrefs.SetInt("Tips", 0);
     }
     public void Quit()
     {
@@ -55,6 +57,17 @@ public class MENU : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("NoDialog", 1);
+        }
+    }
+        public void ActiveTips()
+    {
+        if (tipsToggle.isOn)
+        {
+            PlayerPrefs.SetInt("Tips", 0);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Tips", 1);
         }
     }
 
